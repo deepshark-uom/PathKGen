@@ -1,520 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
-
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
-  <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PathKGen: Pathology Knowledge Assisted MLLM for Explainable Histopathology</title>
+<meta name="title" content="PathKGen: Pathology Knowledge Assisted MLLM for Explainable Histopathology">
+<meta name="description" content="PathKGen is a knowledge graph-assisted multimodal large language model for explainable histopathology report generation, revealing its intermediate reasoning as human-readable graphs.">
+<meta name="keywords" content="PathKGen, histopathology, knowledge graph, MLLM, explainable AI, whole slide image, report generation">
+<meta name="author" content="Nadun Rajapaksha, Sandun Herath, Devnith Wijesinghe, Isiri Amani Withanawasam, Hasindri Watawana, Ranga Rodrigo">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#331303">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="PathKGen">
+<meta property="og:title" content="PathKGen: Pathology Knowledge Assisted MLLM for Explainable Histopathology">
+<meta property="og:description" content="Knowledge graph-assisted MLLM for explainable histopathology report generation.">
+<meta property="og:url" content="https://github.com/nadunnr/PathKGen">
+<meta property="og:image" content="static/images/pathkgen.pdf">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PathKGen: Pathology Knowledge Assisted MLLM for Explainable Histopathology">
+<meta name="twitter:image" content="static/images/pathkgen.pdf">
+<meta name="citation_title" content="PathKGen: Pathology Knowledge Assisted MLLM for Explainable Histopathology">
+<meta name="citation_author" content="Rajapaksha, Nadun">
+<meta name="citation_author" content="Herath, Sandun">
+<meta name="citation_author" content="Wijesinghe, Devnith">
+<meta name="citation_author" content="Withanawasam, Isiri Amani">
+<meta name="citation_author" content="Watawana, Hasindri">
+<meta name="citation_author" content="Rodrigo, Ranga">
+<meta name="citation_publication_date" content="2026">
+<meta name="citation_pdf_url" content="static/pdfs/pathkgen.pdf">
+<link rel="icon" href="static/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"PathKGen: Pathology Knowledge Assisted MLLM for Explainable Histopathology","datePublished":"2026-10-24","url":"https://github.com/nadunnr/PathKGen","author":[{"@type":"Person","name":"Nadun Rajapaksha"},{"@type":"Person","name":"Sandun Herath"},{"@type":"Person","name":"Devnith Wijesinghe"},{"@type":"Person","name":"Isiri Amani Withanawasam"},{"@type":"Person","name":"Hasindri Watawana"},{"@type":"Person","name":"Ranga Rodrigo"}]}
+</script>
+<style>
+:root{
+  --bg:#fbf8fc;--surface:#fff;--ink:#1d1630;--muted:#5d5470;--line:#e6dff0;
+  --eosin:#29010f;--hema:#4b2a8f;--accent:#6b2fa0;--tint:#f3ecfa;--good:#1b8a4b;--bad:#c92a2a;
+  --serif:'Newsreader',Georgia,serif;--sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{--bg:#120d1c;--surface:#1b1428;--ink:#f1ecf8;--muted:#a79bbd;--line:#322846;--eosin:#ff6b9d;--hema:#a98bf0;--accent:#c39bff;--tint:#231a35;--good:#4cd48a;--bad:#ff7b7b}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:22px;align-items:center;height:54px;overflow-x:auto;white-space:nowrap}
+nav b{font-family:var(--serif);font-size:20px;margin-right:auto;color:var(--ink)}
+nav a{font-size:14px;font-weight:500;color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--eosin)}
+header{text-align:center;padding:72px 0 36px;background:radial-gradient(900px 300px at 50% 0,var(--tint),transparent)}
+.venue{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--eosin);border:1px solid var(--eosin);border-radius:99px;padding:3px 14px;margin-bottom:22px}
+h1{font:600 clamp(30px,5vw,50px)/1.15 var(--serif);margin:0 0 6px;letter-spacing:-.01em}
+h1 .k{color:var(--eosin)}
+.authors{margin:26px 0 6px;font-size:18px}
+.authors span{display:inline-block;margin:0 10px}
+.authors sup,.affil sup{color:var(--muted);font-size:.7em}
+.affil{color:var(--muted);font-size:15px;line-height:1.8}
+.btns{margin:30px 0 0;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;gap:8px;align-items:center;padding:10px 20px;border-radius:99px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:600;font-size:15px;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px);background:var(--eosin);color:#fff}
+.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.alt:hover{background:var(--tint);color:var(--ink)}
+section{padding:56px 0}
+h2{font:600 32px/1.2 var(--serif);margin:0 0 22px;text-align:center}
+h2::after{content:"";display:block;width:44px;height:3px;border-radius:3px;margin:12px auto 0;background:linear-gradient(90deg,var(--hema),var(--eosin))}
+h3{font:600 21px var(--serif);margin:34px 0 10px}
+p{margin:0 0 16px}
+.lead{text-align:justify;hyphens:auto}
+figure{margin:28px 0;text-align:center}
+figure img{max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:#fff;cursor:zoom-in}
+figcaption{font-size:14.5px;color:var(--muted);margin-top:12px;text-align:left}
+figcaption b{color:var(--ink)}
+.alt-bg{background:var(--surface);border-block:1px solid var(--line)}
+.video{border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 50px -25px rgba(75,42,143,.5);background:#000}
+.video video{display:block;width:100%}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:28px 0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card .n{font:600 34px var(--serif);color:var(--eosin);line-height:1}
+.card h4{margin:10px 0 4px;font-size:16px}
+.card p{font-size:15px;color:var(--muted);margin:0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0}
+.stat{text-align:center;padding:18px 10px;border-radius:14px;background:var(--tint)}
+.stat b{display:block;font:600 30px var(--serif);color:var(--hema)}
+.stat span{font-size:13.5px;color:var(--muted)}
+.tw{overflow-x:auto;margin:16px 0 8px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14.5px;font-variant-numeric:tabular-nums}
+th,td{padding:10px 14px;text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{background:var(--tint);font-weight:600;border-bottom:1px solid var(--line)}
+tbody tr+tr td{border-top:1px solid var(--line)}
+tr.ours td{font-weight:700;background:color-mix(in srgb,var(--eosin) 10%,transparent)}
+.note{font-size:14px;color:var(--muted);margin-bottom:26px}
+.steps{counter-reset:s;padding:0;list-style:none}
+.steps li{position:relative;padding:4px 0 14px 54px}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:2px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--hema),var(--eosin))}
+.legend{display:flex;gap:18px;justify-content:center;font-size:14px;color:var(--muted);flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.bib{position:relative}
+pre{margin:0;padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow-x:auto;font:13.5px/1.6 ui-monospace,Menlo,Consolas,monospace}
+.copy{position:absolute;top:10px;right:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;font:600 13px var(--sans);cursor:pointer}
+.copy:hover{border-color:var(--eosin)}
+footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+.logos{display:flex;gap:30px;justify-content:center;align-items:center;flex-wrap:wrap;margin-bottom:22px}
+.logos img{height:44px;width:auto;opacity:.85}
+@media (prefers-color-scheme:dark){.logos img{filter:brightness(0) invert(1)}}
+#top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:50%;border:0;background:var(--accent);color:#fff;font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s}
+#top.on{opacity:1;pointer-events:auto}
+#lb{position:fixed;inset:0;z-index:50;background:rgba(10,6,18,.92);display:none;place-items:center;padding:24px;cursor:zoom-out}
+#lb.on{display:grid}
+#lb img{max-width:100%;max-height:100%;border-radius:8px;background:#fff}
+</style>
 </head>
 <body>
+<nav><div class="wrap">
+  <b>Path<span style="color:var(--eosin)">K</span>Gen</b>
+  <a href="#abstract">Abstract</a><a href="#demo">Demo</a><a href="#method">Method</a><a href="#results">Results</a><a href="#explain">Explainability</a><a href="#graph">Knowledge Graph</a><a href="#bibtex">BibTeX</a>
+</div></nav>
 
-
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
+<header><div class="wrap">
+  <span class="venue">WACV 2027</span>
+  <h1><span class="k">PathKGen:</span> Pathology Knowledge Assisted MLLM for Explainable Histopathology</h1>
+  <div class="authors">
+    <span>Nadun Rajapaksha<sup>1,*</sup></span><span>Sandun Herath<sup>1,*</sup></span><span>Devnith Wijesinghe<sup>1,*</sup></span><span>Isiri Amani Withanawasam<sup>1,*</sup></span><span>Hasindri Watawana<sup>2,3</sup></span><span>Ranga Rodrigo<sup>1,†</sup></span>
   </div>
-
-  <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="affil"><sup>1</sup>University of Moratuwa, Sri Lanka &nbsp; <sup>2</sup>Idiap Research Institute, Switzerland &nbsp; <sup>3</sup>EPFL, Switzerland<br><sup>*</sup>Equal contribution &nbsp; <sup>†</sup>Correspondence: <a href="mailto:ranga@uom.lk">ranga@uom.lk</a></div>
+  <div class="btns">
+    <a class="btn" href="static/pdfs/pathkgen.pdf" target="_blank" rel="noopener">📄 Paper</a>
+    <a class="btn" href="https://arxiv.org/abs/2610.33691" target="_blank" rel="noopener">arXiv</a>
+    <a class="btn" href="https://github.com/nadunnr/PathKGen" target="_blank" rel="noopener">&lt;/&gt; Code</a>
+    <a class="btn alt" href="#demo">▶ Demo Video</a>
   </div>
-</section>
+</div></header>
 
+<section style="padding-top:20px"><div class="wrap">
+  <figure>
+    <img src="static/images/teaser.jpg" alt="PathKGen teaser: a whole slide image, the extracted knowledge subgraph, and the generated report" loading="eager">
+  </figure>
+</div></section>
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
+<section id="abstract" class="alt-bg"><div class="wrap">
+  <p class="lead">Whole Slide Image (WSI) analysis serves as the fundamental method for the clinical diagnosis of cancer in digital histopathology. Recent advances in Multimodal Large Language Models (MLLMs) have enabled state-of-the-art (SOTA) automated histopathology report generation. However, MLLMs reason purely through distributions encoded in their neural parameters, limiting the amount of knowledge and reasoning logic they can contain given the model scale. Their black-box reasoning poses another challenge to the human interpretation of intermediate reasoning.</p>
+  <p class="lead">We address these issues by utilizing knowledge graphs to inject external structured knowledge for MLLMs to reason over, while making this reasoning component visible. We introduce <b>PathKGen</b>, a knowledge graph–assisted MLLM for histopathology report generation with two branches: (1) a <b>visual path</b> that learns visual token inputs using pathology foundation models, and (2) a <b>knowledge path</b> that learns knowledge token inputs by extracting key morphological features of WSIs through querying a pathology-specific knowledge graph.</p>
+  <p class="lead">A comprehensive evaluation on the WSI-Bench dataset shows that PathKGen surpasses previous SOTA methods while revealing diagnostic reasoning as visually intuitive graphs. Due to its modular design, the knowledge path is complementary to vision-aligned MLLMs and can be extended to other applications by curating domain-specific knowledge graphs.</p>
+</div></section>
+
+<section id="demo"><div class="wrap">
+  <h2>Demo Video</h2>
+  <div class="video"><video controls playsinline preload="metadata" poster="static/images/teaser.jpg"><source src="static/videos/pathkgen.mp4" type="video/mp4">Your browser does not support the video tag.</video></div>
+</div></section>
+
+<section id="method"><div class="wrap">
+  <h2>Methodology</h2>
+  <p class="lead">Given a WSI, PathKGen runs two parallel paths whose tokens are fed to a Qwen2.5-7B-Instruct MLLM. The model input is a unified prompt <i>P</i> = [<b>v</b>; <b>k</b>; <b>p</b>] of visual tokens, knowledge tokens and the instruction prompt.</p>
+  <figure>
+    <img src="static/images/full_pipeline.jpg" alt="PathKGen pipeline architecture" loading="lazy">
+    <img src="static/images/knowledge_path.jpg" alt="Subgraph extraction example" loading="lazy">
+  </figure>
+  <h3>Knowledge graph curation</h3>
+  <p class="lead">GPT-4o extracts morphological features from WSI-Bench reports; SapBERT links them to UMLS concepts; relations are categorized by semantic type; and pathologists verify the final graph.</p>
+  <figure>
+    <img src="static/images/graph_curating.png" alt="Knowledge graph curation pipeline" loading="lazy">
+  </figure>
+</div></section>
+
+<section id="results" class="alt-bg"><div class="wrap">
+  <h2>Results &amp; Evaluation</h2>
+  <h3>1. Report generation on WSI-Bench</h3>
+  <p class="lead">PathKGen outperforms existing WSI MLLMs on most metrics, including a 9.09% relative gain in the LLM-as-a-Judge WSI-Precision.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Model</th><th>B-1</th><th>B-2</th><th>B-3</th><th>B-4</th><th>R-L</th><th>M</th><th>W-P</th></tr></thead>
+    <tbody>
+    <tr><td>GPT-4o</td><td>0.202</td><td>0.069</td><td>0.030</td><td>0.016</td><td>0.132</td><td>0.167</td><td>0.067</td></tr>
+    <tr><td>Quilt-LLaVA</td><td>0.334</td><td>0.170</td><td>0.093</td><td>0.057</td><td>0.246</td><td>0.291</td><td>0.324</td></tr>
+    <tr><td>MI-Gen</td><td>0.403</td><td>0.306</td><td>0.248</td><td>0.209</td><td>0.446</td><td>0.407</td><td>0.310</td></tr>
+    <tr><td>HistGen</td><td>0.406</td><td>0.307</td><td>0.248</td><td>0.208</td><td>0.448</td><td>0.416</td><td>0.300</td></tr>
+    <tr><td>WSI-Agents</td><td>0.444</td><td>0.308</td><td>0.231</td><td>0.183</td><td>0.448</td><td>0.472</td><td>0.440</td></tr>
+    <tr><td>WSI-LLaVA</td><td>0.480</td><td>0.358</td><td>0.287</td><td>0.240</td><td>0.490</td><td>0.465</td><td>0.380</td></tr>
+    <tr class="ours"><td>PathKGen (Ours)</td><td>0.512</td><td>0.389</td><td>0.316</td><td>0.261</td><td>0.519</td><td>0.485</td><td>0.480</td></tr>
+    </tbody></table></div>
+  <p class="note">B: BLEU, R-L: ROUGE-L, M: METEOR, W-P: WSI-Precision. BERTScore F1: 0.9081 (RoBERTa-large) vs. 0.9068 for WSI-LLaVA.</p>
+
+  <h3>2. Ablation: what does the knowledge path add?</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Knowledge-path input</th><th>B-1</th><th>B-2</th><th>B-3</th><th>B-4</th><th>R-L</th><th>M</th><th>W-P</th></tr></thead>
+    <tbody>
+    <tr><td>None</td><td>0.4922</td><td>0.3745</td><td>0.3063</td><td>0.2548</td><td>0.5185</td><td>0.4730</td><td>0.4661</td></tr>
+    <tr><td>Predicted histology (H)</td><td>0.5020</td><td>0.3805</td><td>0.3088</td><td>0.2558</td><td>0.5174</td><td>0.4789</td><td>0.4570</td></tr>
+    <tr><td>Primary site (PS) only</td><td>0.4959</td><td>0.3773</td><td>0.3072</td><td>0.2549</td><td>0.5142</td><td>0.4750</td><td>0.4480</td></tr>
+    <tr class="ours"><td>PathKGen (H + PS + MF)</td><td>0.5122</td><td>0.3885</td><td>0.3154</td><td>0.2611</td><td>0.5194</td><td>0.4849</td><td>0.4802</td></tr>
+    </tbody></table></div>
+
+  <h3>3. Parameter efficiency</h3>
+  <p class="lead">Adding the knowledge path lets smaller models approach larger ones. Scaling the model still gives the biggest gain, but external knowledge helps at every scale.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Method</th><th>B-1</th><th>B-2</th><th>B-3</th><th>B-4</th><th>R-L</th><th>M</th><th>W-P</th></tr></thead>
+    <tbody>
+    <tr><td>V path only (7B)</td><td>0.4922</td><td>0.3745</td><td>0.3063</td><td>0.2548</td><td>0.5185</td><td>0.4730</td><td>0.4661</td></tr>
+    <tr><td>V + K path (1.5B)</td><td>0.4792</td><td>0.3607</td><td>0.2930</td><td>0.2426</td><td>0.5040</td><td>0.4562</td><td>0.4290</td></tr>
+    <tr><td>V + K path (3B)</td><td>0.4950</td><td>0.3723</td><td>0.3011</td><td>0.2484</td><td>0.5082</td><td>0.4719</td><td>0.4428</td></tr>
+    <tr class="ours"><td>V + K path (7B), PathKGen</td><td>0.5122</td><td>0.3885</td><td>0.3154</td><td>0.2611</td><td>0.5194</td><td>0.4849</td><td>0.4802</td></tr>
+    </tbody></table></div>
+
+  <h3>4. Does the model really use the knowledge?</h3>
+  <p class="lead">Counterfactual interventions at inference time show it does: an oracle histology anchor slightly helps, while a random wrong anchor sharply degrades WSI-Precision.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Intervention</th><th>WSI-Precision</th></tr></thead>
+    <tbody>
+    <tr class="ours"><td>Predicted histology anchor (default)</td><td>0.4802</td></tr>
+    <tr><td>Oracle histology anchor</td><td>0.4830</td></tr>
+    <tr><td>Random-wrong histology anchor</td><td>0.2540</td></tr>
+    </tbody></table></div>
+
+</div></section>
+
+<section id="explain"><div class="wrap">
+  <h2>Qualitative Results &amp; Explainability</h2>
+  <p class="lead">The retrieved subgraph is shown next to each generated report. Features supported by the slide are green, features with no evidence are red, and the predicted histology is blue. The model also learns connections absent from the graph (isolated green nodes) and uses negation, where absent features serve as diagnostic evidence.</p>
+  <div class="legend"><span><i style="background:#1b8a4b"></i>Present in WSI</span><span><i style="background:#d6336c"></i>No evidence</span><span><i style="background:#2563eb"></i>Predicted histology</span></div>
+  <figure>
+    <img src="static/images/full_examples.jpg" alt="Additional qualitative examples" loading="lazy">
+  </figure>
+</div></section>
+
+<section id="graph" class="alt-bg"><div class="wrap">
+  <h2>Curated Pathology Knowledge Graph</h2>
+  <p class="lead">The graph has 177 nodes and 317 edges across 31 histology classes. It is sparse yet cohesive (density 0.01, average out-degree 1.79). Relations fall into six categories: cytological feature (71), growth pattern (69), nuclear feature (57), invasion pattern (50), background feature (42) and found in (28).</p>
+  <figure>
+    <img src="static/images/graph.jpg" alt="Full curated pathology knowledge graph" loading="lazy">
+  </figure>
+</div></section>
+
+<section id="bibtex"><div class="wrap">
+  <h2>BibTeX</h2>
+  <div class="bib">
+    <button class="copy" id="copy">Copy</button>
+<pre id="bib">@article{rajapaksha2026pathkgen,
+  title={PathKGen: Pathology Knowledge Assisted MLLM for Explainable Histopathology},
+  author={Rajapaksha, Nadun and Herath, Sandun and Wijesinghe, Devnith and Withanawasam, Isiri Amani and Watawana, Hasindri and Rodrigo, Ranga},
+  year={2026},
+  url={https://github.com/nadunnr/PathKGen}
+}</pre>
   </div>
-</section>
-<!-- End teaser video -->
+</div></section>
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
+<footer><div class="wrap">
+  <div class="logos">
+    <img src="static/images/logos/uom.png" alt="University of Moratuwa" onerror="this.remove()">
+    <img src="static/images/logos/idiap.png" alt="Idiap Research Institute" onerror="this.remove()">
+    <img src="static/images/logos/epfl.png" alt="EPFL" onerror="this.remove()">
   </div>
-</section>
-<!-- End paper abstract -->
+  <p>University of Moratuwa · Idiap Research Institute · EPFL<br>
+  Page built from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>, licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.</p>
+</div></footer>
 
+<button id="top" aria-label="Back to top">↑</button>
+<div id="lb"><img alt=""></div>
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+<script>
+(function(){
+  var top=document.getElementById('top'),lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+  window.addEventListener('scroll',function(){top.classList.toggle('on',window.scrollY>500)});
+  top.onclick=function(){window.scrollTo({top:0,behavior:'smooth'})};
+  document.querySelectorAll('figure img').forEach(function(i){
+    i.addEventListener('click',function(){lbi.src=i.src;lbi.alt=i.alt;lb.classList.add('on')});
+  });
+  lb.onclick=function(){lb.classList.remove('on')};
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+  document.getElementById('copy').onclick=function(){
+    var b=this,t=document.getElementById('bib').innerText;
+    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='Copied!'}).catch(function(){b.textContent='Press Ctrl+C'});
+    setTimeout(function(){b.textContent='Copy'},1800);
+  };
+})();
+</script>
+</body>
+</html>
