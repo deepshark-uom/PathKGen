@@ -136,11 +136,18 @@ footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;b
   </div>
 </div></header>
 
-<section style="padding-top:20px"><div class="wrap">
-  <figure>
-    <img src="static/images/teaser.jpg" alt="PathKGen teaser: a whole slide image, the extracted knowledge subgraph, and the generated report" loading="eager">
-  </figure>
-</div></section>
+<section style="padding-top: 10px;">
+  <div class="wrap">
+    <figure style="width: 50%; max-width: 800px; margin: 0 auto;">
+      <img
+        src="static/images/teaser.jpg"
+        alt="PathKGen teaser: a whole slide image, the extracted knowledge subgraph, and the generated report"
+        loading="eager"
+        style="display: block; width: 100%; height: auto;"
+      >
+    </figure>
+  </div>
+</section>
 
 <section id="abstract" class="alt-bg"><div class="wrap">
   <p class="lead">Whole Slide Image (WSI) analysis serves as the fundamental method for the clinical diagnosis of cancer in digital histopathology. Recent advances in Multimodal Large Language Models (MLLMs) have enabled state-of-the-art (SOTA) automated histopathology report generation. However, MLLMs reason purely through distributions encoded in their neural parameters, limiting the amount of knowledge and reasoning logic they can contain given the model scale. Their black-box reasoning poses another challenge to the human interpretation of intermediate reasoning.</p>
@@ -153,19 +160,40 @@ footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;b
   <div class="video"><video controls playsinline preload="metadata" poster="static/images/teaser.jpg"><source src="static/videos/pathkgen.mp4" type="video/mp4">Your browser does not support the video tag.</video></div>
 </div></section>
 
-<section id="method"><div class="wrap">
-  <h2>Methodology</h2>
-  <p class="lead">Given a WSI, PathKGen runs two parallel paths whose tokens are fed to a Qwen2.5-7B-Instruct MLLM. The model input is a unified prompt <i>P</i> = [<b>v</b>; <b>k</b>; <b>p</b>] of visual tokens, knowledge tokens and the instruction prompt.</p>
-  <figure>
-    <img src="static/images/full_pipeline.jpg" alt="PathKGen pipeline architecture" loading="lazy">
-    <img src="static/images/knowledge_path.jpg" alt="Subgraph extraction example" loading="lazy">
-  </figure>
-  <h3>Knowledge graph curation</h3>
-  <p class="lead">GPT-4o extracts morphological features from WSI-Bench reports; SapBERT links them to UMLS concepts; relations are categorized by semantic type; and pathologists verify the final graph.</p>
-  <figure>
-    <img src="static/images/graph_curating.png" alt="Knowledge graph curation pipeline" loading="lazy">
-  </figure>
-</div></section>
+<section id="method">
+  <div class="wrap">
+    <h2>Methodology</h2>
+    <p class="lead">
+      Given a WSI, PathKGen runs two parallel paths whose tokens are fed to a Qwen2.5-7B-Instruct MLLM.
+      The model input is a unified prompt <i>P</i> = [<b>v</b>; <b>k</b>; <b>p</b>]
+      of visual tokens, knowledge tokens and the instruction prompt.
+    </p>
+
+    <figure style="width: 60%; max-width: 850px; margin: 20px auto;">
+      <img src="static/images/full_pipeline.jpg"
+           alt="PathKGen pipeline architecture"
+           loading="lazy"
+           style="display: block; width: 100%; height: auto;">
+      <img src="static/images/knowledge_path.jpg"
+           alt="Subgraph extraction example"
+           loading="lazy"
+           style="display: block; width: 100%; height: auto; margin-top: 15px;">
+    </figure>
+
+    <h3>Knowledge graph curation</h3>
+    <p class="lead">
+      GPT-4o extracts morphological features from WSI-Bench reports; SapBERT links them to UMLS concepts;
+      relations are categorized by semantic type; and pathologists verify the final graph.
+    </p>
+
+    <figure style="width: 65%; max-width: 850px; margin: 20px auto;">
+      <img src="static/images/graph_curating.png"
+           alt="Knowledge graph curation pipeline"
+           loading="lazy"
+           style="display: block; width: 100%; height: auto;">
+    </figure>
+  </div>
+</section>
 
 <section id="results" class="alt-bg"><div class="wrap">
   <h2>Results &amp; Evaluation</h2>
