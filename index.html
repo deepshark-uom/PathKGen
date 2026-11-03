@@ -9,7 +9,8 @@
 <meta name="keywords" content="PathKGen, histopathology, knowledge graph, MLLM, explainable AI, whole slide image, report generation">
 <meta name="author" content="Nadun Rajapaksha, Sandun Herath, Devnith Wijesinghe, Isiri Amani Withanawasam, Hasindri Watawana, Ranga Rodrigo">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#331303">
+<meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="PathKGen">
 <meta property="og:title" content="PathKGen: Pathology Knowledge Assisted MLLM for Explainable Histopathology">
@@ -28,7 +29,6 @@
 <meta name="citation_author" content="Rodrigo, Ranga">
 <meta name="citation_publication_date" content="2026">
 <meta name="citation_pdf_url" content="static/pdfs/pathkgen.pdf">
-<link rel="icon" href="static/images/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&display=swap" rel="stylesheet">
@@ -37,13 +37,13 @@
 </script>
 <style>
 :root{
-  --bg:#fbf8fc;--surface:#fff;--ink:#1d1630;--muted:#5d5470;--line:#e6dff0;
+  color-scheme:light;
+  --bg:#fff;--surface:#fff;--ink:#1d1630;--muted:#5d5470;--line:#e6dff0;
   --eosin:#29010f;--hema:#4b2a8f;--accent:#6b2fa0;--tint:#f3ecfa;--good:#1b8a4b;--bad:#c92a2a;
   --serif:'Newsreader',Georgia,serif;--sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
-@media (prefers-color-scheme:dark){:root{--bg:#120d1c;--surface:#1b1428;--ink:#f1ecf8;--muted:#a79bbd;--line:#322846;--eosin:#ff6b9d;--hema:#a98bf0;--accent:#c39bff;--tint:#231a35;--good:#4cd48a;--bad:#ff7b7b}}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
+html{scroll-behavior:smooth;scroll-padding-top:72px;background:#fff}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
 a{color:var(--accent)}
 .wrap{max-width:980px;margin:0 auto;padding:0 24px}
@@ -52,7 +52,7 @@ nav .wrap{display:flex;gap:22px;align-items:center;height:54px;overflow-x:auto;w
 nav b{font-family:var(--serif);font-size:20px;margin-right:auto;color:var(--ink)}
 nav a{font-size:14px;font-weight:500;color:var(--muted);text-decoration:none}
 nav a:hover{color:var(--eosin)}
-header{text-align:center;padding:72px 0 36px;background:radial-gradient(900px 300px at 50% 0,var(--tint),transparent)}
+header{text-align:center;padding:72px 0 36px;background:#fff}
 .venue{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--eosin);border:1px solid var(--eosin);border-radius:99px;padding:3px 14px;margin-bottom:22px}
 h1{font:600 clamp(30px,5vw,50px)/1.15 var(--serif);margin:0 0 6px;letter-spacing:-.01em}
 h1 .k{color:var(--eosin)}
@@ -72,7 +72,7 @@ h3{font:600 21px var(--serif);margin:34px 0 10px}
 p{margin:0 0 16px}
 .lead{text-align:justify;hyphens:auto}
 figure{margin:28px 0;text-align:center}
-figure img{max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:#fff;cursor:zoom-in}
+figure img{max-width:100%;height:auto;border:0;border-radius:0;background:#fff;cursor:zoom-in}
 figcaption{font-size:14.5px;color:var(--muted);margin-top:12px;text-align:left}
 figcaption b{color:var(--ink)}
 .alt-bg{background:var(--surface);border-block:1px solid var(--line)}
@@ -107,7 +107,6 @@ pre{margin:0;padding:22px;background:var(--surface);border:1px solid var(--line)
 footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
 .logos{display:flex;gap:30px;justify-content:center;align-items:center;flex-wrap:wrap;margin-bottom:22px}
 .logos img{height:44px;width:auto;opacity:.85}
-@media (prefers-color-scheme:dark){.logos img{filter:brightness(0) invert(1)}}
 #top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:50%;border:0;background:var(--accent);color:#fff;font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s}
 #top.on{opacity:1;pointer-events:auto}
 #lb{position:fixed;inset:0;z-index:50;background:rgba(10,6,18,.92);display:none;place-items:center;padding:24px;cursor:zoom-out}
