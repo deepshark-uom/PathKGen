@@ -55,9 +55,9 @@ figcaption b{color:var(--ink)}
 table{border-collapse:collapse;width:100%;font-size:14.5px;font-variant-numeric:tabular-nums}
 th,td{padding:10px 14px;text-align:right;white-space:nowrap}
 th:first-child,td:first-child{text-align:left}
-thead th{background:#f6bcd4;font-weight:600;border-bottom:1px solid #ee9fc2}
+thead th{background:#fadbe9;font-weight:600;border-bottom:1px solid #f3bcd4}
 tbody tr+tr td{border-top:1px solid var(--line)}
-tr.ours td{font-weight:700;background:color-mix(in srgb,var(--eosin) 10%,transparent)}
+tr.ours td{font-weight:700}
 .note{font-size:14px;color:var(--muted);margin-bottom:26px}
 .steps{counter-reset:s;padding:0;list-style:none}
 .steps li{position:relative;padding:4px 0 14px 54px}
@@ -78,5 +78,5 @@ footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;b
 /* utilities */
 [hidden]{display:none!important}
 .sec-teaser{padding-top:10px}
-.fig-narrow{width:65%;max-width:850px;margin:20px auto}
-.fig-narrow img{display:block;width:100%;height:auto}
+.fig-full{margin:20px 0}
+.fig-full img{display:block;width:100%;height:auto}
