@@ -1,0 +1,54 @@
+/* Qualitative results: example tabs + three panes (WSI | interactive graph | report) */
+.qx{--green:#12a66a;--green-ink:#0e9a60;--red:#e5484d;--red-ink:#dc3b40;--blue:#3b5bdb;
+  width:min(1160px,calc(100vw - 32px));position:relative;left:50%;transform:translateX(-50%);margin-top:26px}
+
+/* tabs */
+.qx-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 26px;margin-bottom:22px;border-bottom:1px solid var(--line)}
+.qx-tab{margin-bottom:-1px;padding:9px 2px;border:0;border-bottom:2px solid transparent;background:none;color:var(--muted);font:600 14.5px var(--sans);cursor:pointer;transition:color .15s,border-color .15s}
+.qx-tab:hover{color:var(--ink)}
+.qx-tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.qx-tab[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* three panes in a row */
+.qx-row{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.5fr) minmax(0,1.3fr);gap:22px;height:450px}
+
+/* 1. whole slide image */
+.qx-wsi{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-width:0}
+.qx-wsi img{display:block;max-width:100%;max-height:360px;width:auto;height:auto;cursor:default}
+.qx-wsi p{margin:0;font-size:13.5px;color:var(--muted)}
+.qx-wsi b{color:var(--ink)}
+
+/* 2. graph */
+.qx-graph{display:flex;flex-direction:column;min-width:0;border:1.5px solid #dcdce3;border-radius:18px;overflow:hidden}
+.qx-stage{position:relative;flex:1;min-height:0}
+.qx-stage canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
+.qx-status{position:absolute;inset:0;display:grid;place-items:center;padding:20px;text-align:center;font-size:14px;color:var(--muted)}
+.qx-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 12px;padding:11px 12px 0;font-size:11.5px;font-weight:600;color:var(--muted)}
+.qx-legend i{display:inline-block;width:9px;height:9px;margin-right:5px;border-radius:50%}
+.qx-legend .b{background:var(--blue)}.qx-legend .g{background:var(--green)}.qx-legend .r{background:var(--red)}.qx-legend .n{background:#c3c7d2}
+.qx-ctl{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;padding:0 12px 11px}
+.qx-ctl button{min-width:30px;height:28px;padding:0 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--muted);font:600 12px var(--sans);cursor:pointer;transition:color .15s,border-color .15s}
+.qx-ctl button:hover{color:var(--accent);border-color:var(--accent-soft)}
+.qx-ctl button:focus-visible{outline:2px solid var(--accent)}
+
+/* 3. generated report */
+.qx-out{display:flex;align-items:flex-start;min-width:0;padding:20px 22px;border:1.5px solid #dcdce3;border-radius:18px;overflow:auto}
+.qx-report{margin:0;font-size:14.5px;line-height:1.65}
+.qx-report::before{content:"\201C"}
+.qx-report::after{content:"\201D"}
+.qx-g,.qx-r,.qx-dx{font-weight:600;border-radius:3px;transition:background .15s}
+.qx-g{color:var(--green-ink)}
+.qx-r{color:var(--red-ink)}
+.qx-dx{color:var(--blue);font-weight:700}
+.qx-g[data-n],.qx-r[data-n]{cursor:pointer}
+.qx-g.hot{background:rgba(18,166,106,.16)}
+.qx-r.hot{background:rgba(229,72,77,.15)}
+.qx-hint{margin:16px 0 0;text-align:center;font-size:13px;color:var(--muted)}
+
+@media (max-width:899px){
+  .qx{width:100%;left:0;transform:none}
+  .qx-row{grid-template-columns:1fr;height:auto;gap:18px}
+  .qx-wsi img{max-height:230px}
+  .qx-graph{height:440px}
+  .qx-out{overflow:visible}
+}

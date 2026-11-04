@@ -35,183 +35,14 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"PathKGen: Pathology Knowledge Assisted MLLM for Explainable Histopathology","datePublished":"2026-10-24","url":"https://github.com/nadunnr/PathKGen","author":[{"@type":"Person","name":"Nadun Rajapaksha"},{"@type":"Person","name":"Sandun Herath"},{"@type":"Person","name":"Devnith Wijesinghe"},{"@type":"Person","name":"Isiri Amani Withanawasam"},{"@type":"Person","name":"Hasindri Watawana"},{"@type":"Person","name":"Ranga Rodrigo"}]}
 </script>
-<style>
-:root{
-  color-scheme:light;
-  --bg:#fff;--surface:#fff;--ink:#1d1630;--muted:#5d5470;--line:#f1dce8;
-  --eosin:#d81b74;--hema:#ff6fb1;--accent:#d81b74;--accent-soft:#ff6fb1;--tint:#fdecf4;--good:#1b8a4b;--bad:#c92a2a;
-  --serif:'Newsreader',Georgia,serif;--sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px;background:#fff}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
-a{color:var(--accent)}
-.wrap{max-width:980px;margin:0 auto;padding:0 24px}
-nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;gap:22px;align-items:center;height:54px;overflow-x:auto;white-space:nowrap}
-nav b{font-family:var(--serif);font-size:20px;margin-right:auto;color:var(--ink)}
-nav a{font-size:14px;font-weight:500;color:var(--muted);text-decoration:none}
-nav a:hover{color:var(--eosin)}
-header{text-align:center;padding:72px 0 36px;background:#fff}
-.venue{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,var(--accent-soft),var(--accent));border-radius:99px;padding:4px 16px;margin-bottom:22px;box-shadow:0 6px 16px -6px rgba(216,27,116,.55)}
-h1{font:600 clamp(30px,5vw,50px)/1.15 var(--serif);margin:0 0 6px;letter-spacing:-.01em}
-h1 .k{color:var(--eosin)}
-.authors{margin:26px 0 6px;font-size:18px}
-.authors span{display:inline-block;margin:0 10px}
-.authors sup,.affil sup{color:var(--muted);font-size:.7em}
-.affil{color:var(--muted);font-size:15px;line-height:1.8}
-.btns{margin:30px 0 0;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-flex;gap:8px;align-items:center;padding:10px 20px;border-radius:99px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:600;font-size:15px;transition:transform .15s,background .15s}
-.btn:hover{transform:translateY(-2px);background:var(--eosin);color:#fff}
-.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--line)}
-.btn.alt:hover{background:var(--tint);color:var(--ink)}
-section{padding:56px 0}
-h2{font:600 32px/1.2 var(--serif);margin:0 0 22px;text-align:center}
-h2::after{content:"";display:block;width:44px;height:3px;border-radius:3px;margin:12px auto 0;background:linear-gradient(90deg,var(--hema),var(--eosin))}
-::selection{background:var(--accent-soft);color:#fff}
-h3{font:600 21px var(--serif);margin:34px 0 10px}
-p{margin:0 0 16px}
-.lead{text-align:justify;hyphens:auto}
-figure{margin:28px 0;text-align:center}
-figure img{max-width:100%;height:auto;border:0;border-radius:0;background:#fff;cursor:zoom-in}
-figcaption{font-size:14.5px;color:var(--muted);margin-top:12px;text-align:left}
-figcaption b{color:var(--ink)}
-.alt-bg{background:var(--surface);border-block:1px solid var(--line)}
-.video{border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 50px -25px rgba(216,27,116,.5);background:#000}
-.video video{display:block;width:100%}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:28px 0}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
-.card .n{font:600 34px var(--serif);color:var(--eosin);line-height:1}
-.card h4{margin:10px 0 4px;font-size:16px}
-.card p{font-size:15px;color:var(--muted);margin:0}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0}
-.stat{text-align:center;padding:18px 10px;border-radius:14px;background:var(--tint)}
-.stat b{display:block;font:600 30px var(--serif);color:var(--accent)}
-.stat span{font-size:13.5px;color:var(--muted)}
-.tw{overflow-x:auto;margin:16px 0 8px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
-table{border-collapse:collapse;width:100%;font-size:14.5px;font-variant-numeric:tabular-nums}
-th,td{padding:10px 14px;text-align:right;white-space:nowrap}
-th:first-child,td:first-child{text-align:left}
-thead th{background:var(--tint);font-weight:600;border-bottom:1px solid var(--line)}
-tbody tr+tr td{border-top:1px solid var(--line)}
-tr.ours td{font-weight:700;background:color-mix(in srgb,var(--eosin) 10%,transparent)}
-.note{font-size:14px;color:var(--muted);margin-bottom:26px}
-.steps{counter-reset:s;padding:0;list-style:none}
-.steps li{position:relative;padding:4px 0 14px 54px}
-.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:2px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--hema),var(--eosin))}
-.legend{display:flex;gap:18px;justify-content:center;font-size:14px;color:var(--muted);flex-wrap:wrap}
-.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
-.bib{position:relative}
-pre{margin:0;padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow-x:auto;font:13.5px/1.6 ui-monospace,Menlo,Consolas,monospace}
-.copy{position:absolute;top:10px;right:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 12px;font:600 13px var(--sans);cursor:pointer}
-.copy:hover{border-color:var(--eosin)}
-footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
-.logos{display:flex;gap:30px;justify-content:center;align-items:center;flex-wrap:wrap;margin-bottom:22px}
-.logos img{height:44px;width:auto;opacity:.85}
-#top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:50%;border:0;background:var(--accent);color:#fff;font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s}
-#top.on{opacity:1;pointer-events:auto}
-#lb{position:fixed;inset:0;z-index:50;background:rgba(10,6,18,.92);display:none;place-items:center;padding:24px;cursor:zoom-out}
-#lb.on{display:grid}
-#lb img{max-width:100%;max-height:100%;border-radius:8px;background:#fff}
-/* ===== Teaser figure ===== */
-.tz{--green:#12a66a;--green-ink:#0c8a55;--red:#e5484d;--red-ink:#d6363b;--blue:#3b5bdb;--halo:#fff3d9;
-  width:100%;color:var(--ink);font:14px/1.4 var(--sans)}
-.tz *{box-sizing:border-box}
-.tz-grid{display:grid;grid-template-columns:minmax(0,1fr) 42px 276px;align-items:stretch}
-
-/* left: one seamless panel, WSI | graph, with the arrow straddling the seam */
-.tz-box{position:relative;display:flex;border-radius:18px;overflow:hidden;min-height:400px}
-.tz-wsi{flex:none;width:240px;background:linear-gradient(160deg,#f4f1ff,#e2ddfa);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px}
-.tz-wsi img{display:block;width:150px;max-width:100%;height:auto;cursor:default;filter:drop-shadow(0 6px 10px rgba(80,60,160,.22))}
-.tz-wsi p{margin:0;font-size:14px;color:#4a4670}
-.tz-wsi b{color:var(--ink)}
-.tz-kg{flex:1;min-width:0;display:flex;flex-direction:column;background:linear-gradient(160deg,#fffaf0,#ffefd0);padding:12px 12px 12px 34px}
-.tz-leg{display:flex;justify-content:flex-end}
-.tz-leg div{display:inline-flex;gap:12px;background:rgba(255,255,255,.75);border-radius:8px;padding:3px 10px;font-size:11.5px;font-weight:700}
-.tz-leg .g{color:var(--green-ink)}.tz-leg .r{color:var(--red-ink)}
-.tz-leg i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
-.tz-kg svg{flex:1 1 0;min-height:0;width:100%;display:block}
-.tz-kg text{font:700 14.5px var(--sans)}
-.tz-kg .lg{fill:var(--green-ink)}.tz-kg .lr{fill:var(--red-ink)}
-.tz-kg .ct{fill:var(--blue);paint-order:stroke;stroke:var(--halo);stroke-width:5px;stroke-linejoin:round}
-.tz-kg .e{fill:none;stroke-width:2.4;stroke-linecap:round}
-.tz-kg .e.p{stroke:var(--green)}.tz-kg .e.a{stroke:var(--red);stroke-dasharray:7 6}
-.tz-kg .e{transition:stroke-width .25s}
-.tz-kg .e.hot{stroke-width:5}
-.tz-kg .nd .dot,.tz-kg .nd .ring{transform-box:fill-box;transform-origin:center}
-.tz-kg .nd .dot{transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
-.tz-kg .nd .ring{fill:none;stroke:currentColor;stroke-width:2.5;opacity:0}
-.tz-kg .nd.pos{color:var(--green)}.tz-kg .nd.neg{color:var(--red)}
-.tz-kg .nd.hot .dot{transform:scale(1.6)}
-.tz-kg .nd.hot .ring{animation:tz-ping 1s ease-out infinite}
-@keyframes tz-ping{0%{opacity:.85;transform:scale(1)}100%{opacity:0;transform:scale(3.6)}}
-.tz-ex{position:absolute;left:206px;top:50%;width:160px;transform:translateY(-50%);filter:drop-shadow(0 6px 12px rgba(109,40,217,.32))}
-.tz-ex svg{display:block;width:100%;height:auto}
-.tz-ex .v{display:none}
-
-/* arrow towards the chat */
-.tz-go{display:flex;align-items:center;justify-content:flex-start}
-.tz-go svg{display:block;width:34px;height:auto}
-.tz-go .v{display:none}
-
-/* chat */
-.tz-chat{display:flex;flex-direction:column;justify-content:center;gap:10px;min-width:0}
-.tz-msg{display:flex;flex-direction:column;gap:4px;min-width:0}
-.tz-msg>small{font:700 11px var(--sans);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
-.tz-msg.user{align-self:flex-end;max-width:94%;align-items:flex-end}
-.tz-msg.bot{align-self:stretch}
-.tz-bub{border-radius:16px;padding:9px 12px;font-size:13.5px}
-.tz-msg.user .tz-bub{background:#fde6f0;border:1.5px solid #f7b8d2;border-bottom-right-radius:5px}
-.tz-msg.bot .tz-bub{background:#f4f4f6;border:1.5px solid #e1e1e6;border-top-left-radius:5px;line-height:1.55}
-.tz-rep{display:grid}
-.tz-rep>*{grid-area:1/1;margin:0}
-.tz .hg,.tz .hr{font-weight:600;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
-.tz .hg{color:var(--green-ink);text-decoration-color:var(--green)}
-.tz .hr{color:var(--red-ink);text-decoration-color:var(--red)}
-.tz-cur{display:inline-block;width:2px;height:1.1em;background:var(--accent);vertical-align:-.18em;margin-left:2px;animation:tz-blink 1s steps(1) infinite}
-@keyframes tz-blink{50%{opacity:0}}
-.tz.anim .tz-full{opacity:0}
-
-@media (max-width:899px){
-  .tz-grid{grid-template-columns:1fr}
-  .tz-box{flex-direction:column;min-height:0}
-  .tz-wsi{width:auto;height:260px;padding:16px 16px 46px}
-  .tz-wsi img{flex:1 1 0;min-height:0;width:auto;max-width:100%}
-  .tz-kg{padding:34px 12px 12px}
-  .tz-kg svg{flex:none;height:auto;max-width:380px;margin:0 auto}
-  .tz-ex{left:50%;top:224px;width:150px;transform:translateX(-50%)}
-  .tz-ex .h,.tz-go .h{display:none}
-  .tz-ex .v,.tz-go .v{display:block}
-  .tz-go{justify-content:center}
-  .tz-chat{margin-top:8px}
-  .tz-go svg{width:auto;height:30px}
-}
-/* ===== Pipeline figure ===== */
-.pl{width:100%;margin:26px 0 8px}
-.pl-svg{display:block;width:100%;height:auto;font-family:var(--sans)}
-.pl-kt{font:11.2px/15.4px var(--serif);color:#2a2a30;background:#fff;border:1.2px solid #e0d6b8;border-radius:5px;padding:5px 8px;white-space:nowrap;height:100%}
-.pl-kt b{font-weight:700}
-.pl-kt mark{padding:0 2px;border-radius:2px;color:inherit}
-/* animation (JS adds .anim; without JS or with reduced motion everything stays visible) */
-.pl-svg.anim [data-s]{opacity:.2;transition:opacity .45s ease}
-.pl-svg.anim [data-s="llm"]{opacity:.45}
-.pl-svg.anim [data-s].on{opacity:1}
-.pl-svg .tk,.pl-svg .tile,.pl-svg .rb{transform-box:fill-box;transform-origin:center}
-.pl-svg.anim .tk{transform:scale(.55);transition:opacity .35s ease,transform .4s cubic-bezier(.3,1.6,.5,1)}
-.pl-svg.anim .tile{transform:scale(.8);transition:opacity .35s ease,transform .35s cubic-bezier(.3,1.5,.5,1)}
-.pl-svg.anim .tk.on,.pl-svg.anim .tile.on{transform:none}
-.pl-svg.anim .rb{transform-origin:left center;transform:scaleX(0);opacity:1;transition:transform .45s ease}
-.pl-svg.anim .rb.on{transform:scaleX(1)}
-.pl-svg .wsi-scan{opacity:0}
-.pl-svg.scan .wsi-scan{opacity:1;animation:pl-scan 1s ease-in-out forwards}
-@keyframes pl-scan{from{transform:translateX(-60px)}to{transform:translateX(210px)}}
-.pl-svg .llm-body{transition:filter .5s ease}
-.pl-svg.glow .llm-body{filter:drop-shadow(0 0 14px rgba(124,58,237,.55))}
-@media (max-width:820px){
-  .pl{overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .pl-svg{min-width:780px}
-}
-</style>
+<link rel="stylesheet" href="static/css/site.css">
+<link rel="stylesheet" href="static/css/teaser.css">
+<link rel="stylesheet" href="static/css/pipeline.css">
+<link rel="stylesheet" href="static/css/qualitative.css">
+<script src="static/js/site.js" defer></script>
+<script src="static/js/teaser.js" defer></script>
+<script src="static/js/pipeline.js" defer></script>
+<script src="static/js/qualitative.js" defer></script>
 </head>
 <body>
 <nav></nav>
@@ -227,11 +58,11 @@ footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;b
     <a class="btn" href="static/pdfs/pathkgen.pdf" target="_blank" rel="noopener">📄 Paper</a>
     <a class="btn" href="https://arxiv.org/abs/2610.33691" target="_blank" rel="noopener">arXiv</a>
     <a class="btn" href="https://github.com/nadunnr/PathKGen" target="_blank" rel="noopener">&lt;/&gt; Code</a>
-    <a class="btn alt" href="#demo" style="display:none">▶ Demo Video</a>
+    <a class="btn alt" href="#demo" hidden>▶ Demo Video</a>
   </div>
 </div></header>
 
-<section style="padding-top: 10px;">
+<section class="sec-teaser">
   <div class="wrap">
     <div class="tz" id="tz" role="group" aria-label="PathKGen teaser: a whole slide image taken from the lung is converted into a knowledge graph with present and absent features; given the user question, PathKGen outputs a diagnostic report.">
       <div class="tz-grid">
@@ -241,8 +72,53 @@ footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;b
             <p><em>Taken from:</em> <b>Lung</b></p>
           </div>
           <div class="tz-kg">
-            <div class="tz-leg" aria-hidden="true"><div><span class="g"><i style="background:var(--green)"></i>Present</span><span class="r"><i style="background:var(--red)"></i>Not present</span></div></div>
-            <svg viewBox="0 0 380 400" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Extracted knowledge graph for Lung Squamous Cell Carcinoma. Present: prominent nucleoli, intercellular bridges, keratinization, nuclear pleomorphism, atypical squamous cells. Not present: vascular invasion, necrosis."><path class="e p" data-k="nuc" d="M190,205 L72,92"/><path class="e p" data-k="bridge" d="M190,205 L205,56"/><path class="e p" data-k="kera" d="M190,205 L318,120"/><path class="e p" data-k="pleo" d="M190,205 L62,285"/><path class="e p" data-k="atyp" d="M190,205 L170,348"/><path class="e a" data-k="vasc" d="M190,205 L330,225"/><path class="e a" data-k="necro" d="M190,205 L285,330"/><circle cx="190" cy="205" r="10" fill="var(--blue)"/><g class="nd pos" data-k="nuc"><circle class="ring" cx="72" cy="92" r="8.5"/><circle class="dot" cx="72" cy="92" r="8.5" fill="var(--green)"/><text class="lg" text-anchor="middle"><tspan x="72" y="54">Prominent</tspan><tspan x="72" y="70">nucleoli</tspan></text></g><g class="nd pos" data-k="bridge"><circle class="ring" cx="205" cy="56" r="8.5"/><circle class="dot" cx="205" cy="56" r="8.5" fill="var(--green)"/><text class="lg" text-anchor="middle"><tspan x="205" y="18">Intercellular</tspan><tspan x="205" y="34">bridges</tspan></text></g><g class="nd pos" data-k="kera"><circle class="ring" cx="318" cy="120" r="8.5"/><circle class="dot" cx="318" cy="120" r="8.5" fill="var(--green)"/><text class="lg" text-anchor="middle"><tspan x="318" y="100">Keratinization</tspan></text></g><g class="nd pos" data-k="pleo"><circle class="ring" cx="62" cy="285" r="8.5"/><circle class="dot" cx="62" cy="285" r="8.5" fill="var(--green)"/><text class="lg" text-anchor="middle"><tspan x="65" y="307">Nuclear</tspan><tspan x="65" y="323">pleomorphism</tspan></text></g><g class="nd pos" data-k="atyp"><circle class="ring" cx="170" cy="348" r="8.5"/><circle class="dot" cx="170" cy="348" r="8.5" fill="var(--green)"/><text class="lg" text-anchor="middle"><tspan x="170" y="370">Atypical</tspan><tspan x="170" y="386">squamous cells</tspan></text></g><g class="nd neg" data-k="vasc"><circle class="ring" cx="330" cy="225" r="8.5"/><circle class="dot" cx="330" cy="225" r="8.5" fill="var(--red)"/><text class="lr" text-anchor="middle"><tspan x="330" y="247">Vascular</tspan><tspan x="330" y="263">invasion</tspan></text></g><g class="nd neg" data-k="necro"><circle class="ring" cx="285" cy="330" r="8.5"/><circle class="dot" cx="285" cy="330" r="8.5" fill="var(--red)"/><text class="lr" text-anchor="middle"><tspan x="285" y="352">Necrosis</tspan></text></g><text class="ct" text-anchor="middle"><tspan x="196" y="231">Lung Squamous</tspan><tspan x="196" y="247">Cell Carcinoma</tspan></text></svg>
+            <div class="tz-leg" aria-hidden="true"><div><span class="g"><i></i>Present</span><span class="r"><i></i>Not present</span></div></div>
+            <svg viewBox="0 0 380 400" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Extracted knowledge graph for Lung Squamous Cell Carcinoma. Present: prominent nucleoli, intercellular bridges, keratinization, nuclear pleomorphism, atypical squamous cells. Not present: vascular invasion, necrosis.">
+              <path class="e p" data-k="nuc" d="M190,205 L72,92"/>
+              <path class="e p" data-k="bridge" d="M190,205 L205,56"/>
+              <path class="e p" data-k="kera" d="M190,205 L318,120"/>
+              <path class="e p" data-k="pleo" d="M190,205 L62,285"/>
+              <path class="e p" data-k="atyp" d="M190,205 L170,348"/>
+              <path class="e a" data-k="vasc" d="M190,205 L330,225"/>
+              <path class="e a" data-k="necro" d="M190,205 L285,330"/>
+              <circle cx="190" cy="205" r="10" fill="var(--blue)"/>
+              <g class="nd pos" data-k="nuc">
+                <circle class="ring" cx="72" cy="92" r="8.5"/>
+                <circle class="dot" cx="72" cy="92" r="8.5" fill="var(--green)"/>
+                <text class="lg" text-anchor="middle"><tspan x="72" y="54">Prominent</tspan><tspan x="72" y="70">nucleoli</tspan></text>
+              </g>
+              <g class="nd pos" data-k="bridge">
+                <circle class="ring" cx="205" cy="56" r="8.5"/>
+                <circle class="dot" cx="205" cy="56" r="8.5" fill="var(--green)"/>
+                <text class="lg" text-anchor="middle"><tspan x="205" y="18">Intercellular</tspan><tspan x="205" y="34">bridges</tspan></text>
+              </g>
+              <g class="nd pos" data-k="kera">
+                <circle class="ring" cx="318" cy="120" r="8.5"/>
+                <circle class="dot" cx="318" cy="120" r="8.5" fill="var(--green)"/>
+                <text class="lg" text-anchor="middle"><tspan x="318" y="100">Keratinization</tspan></text>
+              </g>
+              <g class="nd pos" data-k="pleo">
+                <circle class="ring" cx="62" cy="285" r="8.5"/>
+                <circle class="dot" cx="62" cy="285" r="8.5" fill="var(--green)"/>
+                <text class="lg" text-anchor="middle"><tspan x="65" y="307">Nuclear</tspan><tspan x="65" y="323">pleomorphism</tspan></text>
+              </g>
+              <g class="nd pos" data-k="atyp">
+                <circle class="ring" cx="170" cy="348" r="8.5"/>
+                <circle class="dot" cx="170" cy="348" r="8.5" fill="var(--green)"/>
+                <text class="lg" text-anchor="middle"><tspan x="170" y="370">Atypical</tspan><tspan x="170" y="386">squamous cells</tspan></text>
+              </g>
+              <g class="nd neg" data-k="vasc">
+                <circle class="ring" cx="330" cy="225" r="8.5"/>
+                <circle class="dot" cx="330" cy="225" r="8.5" fill="var(--red)"/>
+                <text class="lr" text-anchor="middle"><tspan x="330" y="247">Vascular</tspan><tspan x="330" y="263">invasion</tspan></text>
+              </g>
+              <g class="nd neg" data-k="necro">
+                <circle class="ring" cx="285" cy="330" r="8.5"/>
+                <circle class="dot" cx="285" cy="330" r="8.5" fill="var(--red)"/>
+                <text class="lr" text-anchor="middle"><tspan x="285" y="352">Necrosis</tspan></text>
+              </g>
+              <text class="ct" text-anchor="middle"><tspan x="196" y="231">Lung Squamous</tspan><tspan x="196" y="247">Cell Carcinoma</tspan></text>
+            </svg>
           </div>
           <div class="tz-ex" aria-hidden="true">
             <svg class="h" viewBox="0 0 170 90"><defs><linearGradient id="tzg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#6d28d9"/></linearGradient></defs><polygon points="0,20 112,20 112,0 170,45 112,90 112,70 0,70" fill="url(#tzg1)"/><text text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="20" fill="#fff"><tspan x="52" y="42">Graph</tspan><tspan x="52" y="64">extract</tspan></text></svg>
@@ -273,7 +149,7 @@ footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;b
   <p class="lead">A comprehensive evaluation on the WSI-Bench dataset shows that PathKGen surpasses previous SOTA methods while revealing diagnostic reasoning as visually intuitive graphs. Due to its modular design, the knowledge path is complementary to vision-aligned MLLMs and can be extended to other applications by curating domain-specific knowledge graphs.</p>
 </div></section>
 
-<section id="demo" style="display:none"><div class="wrap">
+<section id="demo" hidden><div class="wrap">
   <h2>Demo Video</h2>
   <div class="video"><video controls playsinline preload="metadata" poster="static/images/teaser.jpg"><source src="static/videos/pathkgen.mp4" type="video/mp4">Your browser does not support the video tag.</video></div>
 </div></section>
@@ -287,7 +163,272 @@ footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;b
       of visual tokens, knowledge tokens and the instruction prompt.
     </p>
 
-    <div class="pl"><svg class="pl-svg" viewBox="0 0 1490 700" role="img" aria-labelledby="pl-t pl-d" xmlns="http://www.w3.org/2000/svg"><title id="pl-t">PathKGen pipeline</title><desc id="pl-d">A whole slide image is tiled into 512 by 512 patches, encoded by a frozen CONCH patch encoder and a frozen TITAN slide encoder, and projected into visual tokens. The slide embedding goes to an auxiliary classifier that, together with the primary site, predicts a histology class used to retrieve a subgraph from the pathology knowledge graph. The subgraph is converted to text and tokenized into knowledge tokens. Together with the tokenized prompt, visual and knowledge tokens are fed into the Qwen2.5 7B MLLM, which writes the pathology report.</desc><defs><marker id="ah" viewBox="0 0 10 10" refX="9.2" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto"><path d="M0,0.8 L9.4,5 L0,9.2 Z" fill="#8b91a3"/></marker><clipPath id="wclip"><rect x="20" y="69" width="210" height="182" rx="8"/></clipPath><clipPath id="qclip"><rect x="1213" y="54" width="58" height="58" rx="15"/></clipPath><linearGradient id="scg" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#7c3aed" stop-opacity="0"/><stop offset=".7" stop-color="#7c3aed" stop-opacity=".28"/><stop offset="1" stop-color="#7c3aed" stop-opacity=".5"/></linearGradient><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#2b3358" flood-opacity=".12"/></filter></defs><rect x="310" y="20" width="450" height="280" rx="30" fill="#e8ebfd" /><rect x="20" y="340" width="1055" height="240" rx="30" fill="#fbf0d8" /><text x="332" y="292" font-size="19" font-weight="700" fill="#4153d6" text-anchor="start" >Vision encoder</text><text x="42" y="566" font-size="19" font-weight="700" fill="#b8841f" text-anchor="start" >Knowledge path</text><rect x="20" y="69" width="210" height="182" rx="8" fill="#fff" filter="url(#sh)"/><image href="static/images/wsi.jpg" x="20" y="69" width="210" height="182" preserveAspectRatio="xMidYMid slice" clip-path="url(#wclip)"/><rect x="20.5" y="69.5" width="209" height="181" rx="8" fill="none" stroke="#dde0e8" stroke-width="1" /><g clip-path="url(#wclip)"><rect class="wsi-scan" x="20" y="69" width="60" height="182" fill="url(#scg)"/></g><text x="125" y="281" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" >Whole slide image</text><text x="290" y="118" font-size="16" font-weight="500" fill="#5b6275" text-anchor="middle" data-s="a-wsi">512×512</text><text x="290" y="138" font-size="16" font-weight="500" fill="#5b6275" text-anchor="middle" data-s="a-wsi">patches</text><g stroke="#8b91a3" stroke-width="2.1" fill="none"><line x1="236" y1="160" x2="330" y2="160" marker-end="url(#ah)" data-s="a-wsi"/><line x1="376" y1="62" x2="430" y2="62" marker-end="url(#ah)" data-s="a-te"/><line x1="559" y1="62" x2="610" y2="62" marker-end="url(#ah)" data-s="a-es"/><line x1="376" y1="97" x2="430" y2="97" marker-end="url(#ah)" data-s="a-te"/><line x1="559" y1="97" x2="610" y2="97" marker-end="url(#ah)" data-s="a-es"/><line x1="376" y1="132" x2="430" y2="132" marker-end="url(#ah)" data-s="a-te"/><line x1="559" y1="132" x2="610" y2="132" marker-end="url(#ah)" data-s="a-es"/><line x1="376" y1="188" x2="430" y2="188" marker-end="url(#ah)" data-s="a-te"/><line x1="559" y1="188" x2="610" y2="188" marker-end="url(#ah)" data-s="a-es"/><line x1="376" y1="223" x2="430" y2="223" marker-end="url(#ah)" data-s="a-te"/><line x1="559" y1="223" x2="610" y2="223" marker-end="url(#ah)" data-s="a-es"/><line x1="376" y1="258" x2="430" y2="258" marker-end="url(#ah)" data-s="a-te"/><line x1="559" y1="258" x2="610" y2="258" marker-end="url(#ah)" data-s="a-es"/><line x1="739" y1="152" x2="878" y2="152" marker-end="url(#ah)" data-s="a-vt"/><line x1="982" y1="152" x2="1136" y2="152" marker-end="url(#ah)" data-s="a-pv"/><path d="M674,266 V322 H264 V368" marker-end="url(#ah)" data-s="a-emb"/><line x1="264" y1="390" x2="264" y2="433" marker-end="url(#ah)" data-s="a-ec"/><line x1="147" y1="470" x2="176" y2="470" marker-end="url(#ah)" data-s="a-psc"/><line x1="302" y1="470" x2="336" y2="470" marker-end="url(#ah)" data-s="a-ch"/><line x1="434" y1="470" x2="468" y2="470" marker-end="url(#ah)" data-s="a-hp"/><line x1="630" y1="470" x2="656" y2="470" marker-end="url(#ah)" data-s="a-pg"/><line x1="773" y1="470" x2="804" y2="470" marker-end="url(#ah)" data-s="a-gt"/><line x1="1064" y1="470" x2="1136" y2="470" marker-end="url(#ah)" data-s="a-kt"/><line x1="1064" y1="638" x2="1136" y2="638" marker-end="url(#ah)" data-s="a-pt"/></g><image class="tile" data-s="tile1" href="static/images/patches/patch1.jpg" x="336" y="46.5" width="38" height="31" preserveAspectRatio="xMidYMid slice"/><rect class="tile" data-s="tile1" x="336" y="46.5" width="38" height="31" fill="none" stroke="#c9cde0" stroke-width="1"/><image class="tile" data-s="tile2" href="static/images/patches/patch2.jpg" x="336" y="81.5" width="38" height="31" preserveAspectRatio="xMidYMid slice"/><rect class="tile" data-s="tile2" x="336" y="81.5" width="38" height="31" fill="none" stroke="#c9cde0" stroke-width="1"/><image class="tile" data-s="tile3" href="static/images/patches/patch3.jpg" x="336" y="116.5" width="38" height="31" preserveAspectRatio="xMidYMid slice"/><rect class="tile" data-s="tile3" x="336" y="116.5" width="38" height="31" fill="none" stroke="#c9cde0" stroke-width="1"/><image class="tile" data-s="tile4" href="static/images/patches/patch4.jpg" x="336" y="172.5" width="38" height="31" preserveAspectRatio="xMidYMid slice"/><rect class="tile" data-s="tile4" x="336" y="172.5" width="38" height="31" fill="none" stroke="#c9cde0" stroke-width="1"/><image class="tile" data-s="tile5" href="static/images/patches/patch5.jpg" x="336" y="207.5" width="38" height="31" preserveAspectRatio="xMidYMid slice"/><rect class="tile" data-s="tile5" x="336" y="207.5" width="38" height="31" fill="none" stroke="#c9cde0" stroke-width="1"/><image class="tile" data-s="tile6" href="static/images/patches/patch6.jpg" x="336" y="242.5" width="38" height="31" preserveAspectRatio="xMidYMid slice"/><rect class="tile" data-s="tile6" x="336" y="242.5" width="38" height="31" fill="none" stroke="#c9cde0" stroke-width="1"/><circle data-s="tile1" cx="355" cy="152" r="2" fill="#6a7190"/><circle data-s="tile1" cx="355" cy="160" r="2" fill="#6a7190"/><circle data-s="tile1" cx="355" cy="168" r="2" fill="#6a7190"/><rect x="432" y="38" width="125" height="228" rx="24" fill="#bcc3f7" stroke="#4a5bd8" stroke-width="2.2" data-s="pe"/><text transform="translate(494.5,152) rotate(-90)" font-size="20" font-weight="600" fill="#232634" text-anchor="middle" data-s="pe"><tspan x="0" y="-4.5">Patch encoder</tspan><tspan x="0" y="18.5">CONCH</tspan></text><circle cx="553" cy="40" r="14" fill="#fff" data-s="pe"/><g data-s="pe" transform="translate(553,40) scale(0.95)" stroke="#43a6ea" stroke-width="2.1" stroke-linecap="round" fill="none"><line x1="-0.00" y1="-10.00" x2="0.00" y2="10.00"/><line x1="8.66" y1="-5.00" x2="-8.66" y2="5.00"/><line x1="8.66" y1="5.00" x2="-8.66" y2="-5.00"/><line x1="0.00" y1="10.00" x2="-2.29" y2="6.72"/><line x1="0.00" y1="10.00" x2="2.29" y2="6.72"/><line x1="-8.66" y1="5.00" x2="-6.97" y2="1.37"/><line x1="-8.66" y1="5.00" x2="-4.68" y2="5.35"/><line x1="-8.66" y1="-5.00" x2="-4.68" y2="-5.35"/><line x1="-8.66" y1="-5.00" x2="-6.97" y2="-1.37"/><line x1="-0.00" y1="-10.00" x2="2.29" y2="-6.72"/><line x1="-0.00" y1="-10.00" x2="-2.29" y2="-6.72"/><line x1="8.66" y1="-5.00" x2="6.97" y2="-1.37"/><line x1="8.66" y1="-5.00" x2="4.68" y2="-5.35"/><line x1="8.66" y1="5.00" x2="4.68" y2="5.35"/><line x1="8.66" y1="5.00" x2="6.97" y2="1.37"/></g><rect x="612" y="38" width="125" height="228" rx="24" fill="#bcc3f7" stroke="#4a5bd8" stroke-width="2.2" data-s="se"/><text transform="translate(674.5,152) rotate(-90)" font-size="20" font-weight="600" fill="#232634" text-anchor="middle" data-s="se"><tspan x="0" y="-4.5">Slide encoder</tspan><tspan x="0" y="18.5">TITAN</tspan></text><circle cx="733" cy="40" r="14" fill="#fff" data-s="se"/><g data-s="se" transform="translate(733,40) scale(0.95)" stroke="#43a6ea" stroke-width="2.1" stroke-linecap="round" fill="none"><line x1="-0.00" y1="-10.00" x2="0.00" y2="10.00"/><line x1="8.66" y1="-5.00" x2="-8.66" y2="5.00"/><line x1="8.66" y1="5.00" x2="-8.66" y2="-5.00"/><line x1="0.00" y1="10.00" x2="-2.29" y2="6.72"/><line x1="0.00" y1="10.00" x2="2.29" y2="6.72"/><line x1="-8.66" y1="5.00" x2="-6.97" y2="1.37"/><line x1="-8.66" y1="5.00" x2="-4.68" y2="5.35"/><line x1="-8.66" y1="-5.00" x2="-4.68" y2="-5.35"/><line x1="-8.66" y1="-5.00" x2="-6.97" y2="-1.37"/><line x1="-0.00" y1="-10.00" x2="2.29" y2="-6.72"/><line x1="-0.00" y1="-10.00" x2="-2.29" y2="-6.72"/><line x1="8.66" y1="-5.00" x2="6.97" y2="-1.37"/><line x1="8.66" y1="-5.00" x2="4.68" y2="-5.35"/><line x1="8.66" y1="5.00" x2="4.68" y2="5.35"/><line x1="8.66" y1="5.00" x2="6.97" y2="1.37"/></g><rect x="880" y="38" width="100" height="228" rx="24" fill="#bcc3f7" stroke="#4a5bd8" stroke-width="2.2" data-s="pr"/><text transform="translate(930,152) rotate(-90)" font-size="20" font-weight="600" fill="#232634" text-anchor="middle" data-s="pr"><tspan x="0" y="-4.5">Projection</tspan><tspan x="0" y="18.5">Layer</tspan></text><circle cx="976" cy="40" r="14" fill="#fff" data-s="pr"/><g data-s="pr" transform="translate(976,40) scale(0.8) translate(-12,-12)"><path d="M12 0.5C13.2 6 19.5 8 19.5 15.5C19.5 20.5 16 23.5 12 23.5C8 23.5 4.5 20.5 4.5 15.5C4.5 11.2 7.3 9.2 7.8 5.2C9.4 6.8 10.4 8 11 9.4C11.8 6.6 11.2 3.6 12 0.5Z" fill="#f2761c"/><path d="M12 23.5C9.4 23.5 7.6 21.6 7.6 19C7.6 16.4 9.9 14.8 12 12C14.1 14.8 16.4 16.4 16.4 19C16.4 21.6 14.6 23.5 12 23.5Z" fill="#ffc83d"/></g><text x="808" y="138" font-size="17" font-weight="700" fill="#4153d6" text-anchor="middle" data-s="a-vt">Visual tokens</text><g transform="translate(30,0)"><g stroke="#8b91a3" stroke-width="2.1" fill="none"><line x1="1136" y1="62" x2="1198" y2="62" marker-end="url(#ah)" data-s="a-v0"/><line x1="1136" y1="98" x2="1198" y2="98" marker-end="url(#ah)" data-s="a-v1"/><line x1="1136" y1="134" x2="1198" y2="134" marker-end="url(#ah)" data-s="a-v2"/><line x1="1136" y1="170" x2="1198" y2="170" marker-end="url(#ah)" data-s="a-v3"/><line x1="1136" y1="206" x2="1198" y2="206" marker-end="url(#ah)" data-s="a-v4"/><line x1="1136" y1="242" x2="1198" y2="242" marker-end="url(#ah)" data-s="a-v5"/><line x1="1136" y1="380" x2="1198" y2="380" marker-end="url(#ah)" data-s="a-k0"/><line x1="1136" y1="416" x2="1198" y2="416" marker-end="url(#ah)" data-s="a-k1"/><line x1="1136" y1="452" x2="1198" y2="452" marker-end="url(#ah)" data-s="a-k2"/><line x1="1136" y1="488" x2="1198" y2="488" marker-end="url(#ah)" data-s="a-k3"/><line x1="1136" y1="524" x2="1198" y2="524" marker-end="url(#ah)" data-s="a-k4"/><line x1="1136" y1="560" x2="1198" y2="560" marker-end="url(#ah)" data-s="a-k5"/><line x1="1136" y1="605" x2="1198" y2="605" marker-end="url(#ah)" data-s="a-p0"/><line x1="1136" y1="638" x2="1198" y2="638" marker-end="url(#ah)" data-s="a-p1"/><line x1="1136" y1="671" x2="1198" y2="671" marker-end="url(#ah)" data-s="a-p2"/><line x1="1288" y1="357" x2="1340" y2="357" marker-end="url(#ah)" data-s="a-doc"/></g><rect x="1110" y="51" width="24" height="24" rx="5" fill="#4357d8" class="tk" data-s="v0"/><rect x="1110" y="87" width="24" height="24" rx="5" fill="#4357d8" class="tk" data-s="v1"/><rect x="1110" y="123" width="24" height="24" rx="5" fill="#4357d8" class="tk" data-s="v2"/><rect x="1110" y="159" width="24" height="24" rx="5" fill="#4357d8" class="tk" data-s="v3"/><rect x="1110" y="195" width="24" height="24" rx="5" fill="#4357d8" class="tk" data-s="v4"/><rect x="1110" y="231" width="24" height="24" rx="5" fill="#4357d8" class="tk" data-s="v5"/><rect x="1110" y="369" width="24" height="24" rx="5" fill="#d9962f" class="tk" data-s="k0"/><rect x="1110" y="405" width="24" height="24" rx="5" fill="#d9962f" class="tk" data-s="k1"/><rect x="1110" y="441" width="24" height="24" rx="5" fill="#d9962f" class="tk" data-s="k2"/><rect x="1110" y="477" width="24" height="24" rx="5" fill="#d9962f" class="tk" data-s="k3"/><rect x="1110" y="513" width="24" height="24" rx="5" fill="#d9962f" class="tk" data-s="k4"/><rect x="1110" y="549" width="24" height="24" rx="5" fill="#d9962f" class="tk" data-s="k5"/><rect x="1110" y="594" width="24" height="24" rx="5" fill="#ea7d62" class="tk" data-s="p0"/><rect x="1110" y="627" width="24" height="24" rx="5" fill="#ea7d62" class="tk" data-s="p1"/><rect x="1110" y="660" width="24" height="24" rx="5" fill="#ea7d62" class="tk" data-s="p2"/><text x="1100" y="252" font-size="19" font-weight="700" fill="#4153d6" text-anchor="end" data-s="v0">v</text><text x="1100" y="574" font-size="19" font-weight="700" fill="#b8841f" text-anchor="end" data-s="k0">k</text><text x="1100" y="694" font-size="19" font-weight="700" fill="#d4604a" text-anchor="end" data-s="p0">p</text></g><text x="1104" y="456" font-size="15" font-weight="500" fill="#5b6275" text-anchor="middle" data-s="a-kt">Tokenize</text><text x="1104" y="624" font-size="15" font-weight="500" fill="#5b6275" text-anchor="middle" data-s="a-pt">Tokenize</text><rect x="40" y="435" width="107" height="70" rx="16" fill="#f6d98e" stroke="#d9a13a" stroke-width="2.2" data-s="ps"/><text x="93.5" y="466.0" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" data-s="ps">Primary</text><text x="93.5" y="487.0" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" data-s="ps">site</text><rect x="178" y="435" width="124" height="70" rx="16" fill="#f6d98e" stroke="#d9a13a" stroke-width="2.2" data-s="cl"/><text x="240.0" y="466.0" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" data-s="cl">Auxiliary</text><text x="240.0" y="487.0" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" data-s="cl">classifier</text><rect x="336" y="445" width="98" height="50" rx="16" fill="#f6d98e" stroke="#d9a13a" stroke-width="2.2" data-s="hc"/><text x="385.0" y="466.0" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" data-s="hc">Histology</text><text x="385.0" y="487.0" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" data-s="hc">class</text><rect x="468" y="435" width="162" height="70" rx="16" fill="#f6d98e" stroke="#d9a13a" stroke-width="2.2" data-s="pg"/><text x="549.0" y="466.0" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" data-s="pg">Pathology</text><text x="549.0" y="487.0" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" data-s="pg">Knowledge Graph</text><rect x="222" y="370" width="14" height="18" rx="0" fill="#f6d98e" stroke="#d9a13a" stroke-width="1.3" data-s="emb"/><rect x="236" y="370" width="14" height="18" rx="0" fill="#f6d98e" stroke="#d9a13a" stroke-width="1.3" data-s="emb"/><rect x="250" y="370" width="14" height="18" rx="0" fill="#f6d98e" stroke="#d9a13a" stroke-width="1.3" data-s="emb"/><rect x="264" y="370" width="14" height="18" rx="0" fill="#f6d98e" stroke="#d9a13a" stroke-width="1.3" data-s="emb"/><rect x="278" y="370" width="14" height="18" rx="0" fill="#f6d98e" stroke="#d9a13a" stroke-width="1.3" data-s="emb"/><rect x="292" y="370" width="14" height="18" rx="0" fill="#f6d98e" stroke="#d9a13a" stroke-width="1.3" data-s="emb"/><text x="318" y="385" font-size="15" font-weight="500" fill="#5b6275" text-anchor="start" data-s="emb">Slide embeddings</text><line data-s="sg1" x1="716" y1="470" x2="716.0" y2="424.0" stroke="#a9aebd" stroke-width="1.6"/><line data-s="sg2" x1="716" y1="470" x2="755.8" y2="447.0" stroke="#a9aebd" stroke-width="1.6"/><line data-s="sg3" x1="716" y1="470" x2="755.8" y2="493.0" stroke="#a9aebd" stroke-width="1.6"/><line data-s="sg4" x1="716" y1="470" x2="716.0" y2="516.0" stroke="#a9aebd" stroke-width="1.6"/><line data-s="sg5" x1="716" y1="470" x2="676.2" y2="493.0" stroke="#a9aebd" stroke-width="1.6"/><line data-s="sg6" x1="716" y1="470" x2="676.2" y2="447.0" stroke="#a9aebd" stroke-width="1.6"/><circle data-s="sg1" cx="716.0" cy="424.0" r="11" fill="#f6c3a0" stroke="#8d93a8" stroke-width="1.2"/><circle data-s="sg2" cx="755.8" cy="447.0" r="11" fill="#f5c3e4" stroke="#8d93a8" stroke-width="1.2"/><circle data-s="sg3" cx="755.8" cy="493.0" r="11" fill="#f4ec8e" stroke="#8d93a8" stroke-width="1.2"/><circle data-s="sg4" cx="716.0" cy="516.0" r="11" fill="#bcd9f3" stroke="#8d93a8" stroke-width="1.2"/><circle data-s="sg5" cx="676.2" cy="493.0" r="11" fill="#c3e5b8" stroke="#8d93a8" stroke-width="1.2"/><circle data-s="sg6" cx="676.2" cy="447.0" r="11" fill="#c7c2f6" stroke="#8d93a8" stroke-width="1.2"/><circle data-s="sg0" cx="716" cy="470" r="13" fill="#f4c542" stroke="#c9972a" stroke-width="1.4"/><text x="716" y="548" font-size="16" font-weight="600" fill="#232634" text-anchor="middle" data-s="sg0">Retrieved</text><text x="716" y="567" font-size="16" font-weight="600" fill="#232634" text-anchor="middle" data-s="sg0">subgraph</text><foreignObject data-s="tb" x="806" y="410" width="254" height="120"><div class="pl-kt"><b>histology:</b> papillary renal cell carcinoma,<br><b>growth patterns:</b> <mark style="background:#f7cdb0">papillary pattern</mark>,<br><b>cytological features:</b> <mark style="background:#cfcaf7">abundant cytoplasm</mark>,<br><b>background features:</b> <mark style="background:#f6cfe9">foam cells</mark>,<br><b>has invasive patterns:</b> <mark style="background:#f8f2a6">vascular invasion</mark>,<br><b>nuclear features:</b> <mark style="background:#cfe9c6">irregular nuclei</mark>,<br><b>found in:</b> <mark style="background:#cfe4f7">kidney</mark></div></foreignObject><rect x="178" y="612" width="882" height="52" rx="14" fill="#eceef3" data-s="pm"/><text data-s="pm" x="198" y="644" font-size="16.5" fill="#3b4252" font-weight="500" text-anchor="start"><tspan font-weight="700">Prompt:</tspan> “With the help of the knowledge provided, describe the histology of the Whole Slide Image.”</text><g transform="translate(30,0)"><rect x="1200" y="30" width="84" height="655" rx="26" fill="#1b2132" class="llm-body" data-s="llm"/><rect data-s="llm" x="1213" y="54" width="58" height="58" rx="15" fill="#fff"/><image data-s="llm" href="static/images/Qwen_logo.svg" x="1219" y="60" width="46" height="46"/><circle cx="1278" cy="34" r="14" fill="#fff" data-s="llm"/><g data-s="llm" transform="translate(1278,34) scale(0.8) translate(-12,-12)"><path d="M12 0.5C13.2 6 19.5 8 19.5 15.5C19.5 20.5 16 23.5 12 23.5C8 23.5 4.5 20.5 4.5 15.5C4.5 11.2 7.3 9.2 7.8 5.2C9.4 6.8 10.4 8 11 9.4C11.8 6.6 11.2 3.6 12 0.5Z" fill="#f2761c"/><path d="M12 23.5C9.4 23.5 7.6 21.6 7.6 19C7.6 16.4 9.9 14.8 12 12C14.1 14.8 16.4 16.4 16.4 19C16.4 21.6 14.6 23.5 12 23.5Z" fill="#ffc83d"/></g><text data-s="llm" transform="translate(1236,420) rotate(-90)" text-anchor="middle" fill="#fff"><tspan x="0" y="0" font-size="23" font-weight="700">MLLM (Qwen2.5 7B)</tspan><tspan x="0" y="24" font-size="14.5" font-weight="500" fill="#aab1c8">+ prompt, QLoRA</tspan></text><path d="M1345,290 Q1345,282 1353,282 L1430,282 L1455,307 L1455,424 Q1455,432 1447,432 L1353,432 Q1345,432 1345,424 Z" fill="#f4f5f9" stroke="#d3d8e3" stroke-width="1.6" filter="url(#sh)" data-s="doc"/><path data-s="doc" d="M1430,282 L1430,299 Q1430,307 1438,307 L1455,307 Z" fill="#e3e7f0" stroke="#d3d8e3" stroke-width="1.6" stroke-linejoin="round"/><text x="1362" y="331" font-size="17" font-weight="700" fill="#232634" text-anchor="start" data-s="doc">Pathology</text><text x="1362" y="352" font-size="17" font-weight="700" fill="#232634" text-anchor="start" data-s="doc">report</text><rect x="1362" y="370" width="76" height="6" rx="3" fill="#cdd2de" class="rb" data-s="rb0"/><rect x="1362" y="384" width="68" height="6" rx="3" fill="#cdd2de" class="rb" data-s="rb1"/><rect x="1362" y="398" width="76" height="6" rx="3" fill="#cdd2de" class="rb" data-s="rb2"/><rect x="1362" y="412" width="46" height="6" rx="3" fill="#cdd2de" class="rb" data-s="rb3"/><g transform="translate(1356,52) scale(0.95)" stroke="#43a6ea" stroke-width="2.1" stroke-linecap="round" fill="none"><line x1="-0.00" y1="-10.00" x2="0.00" y2="10.00"/><line x1="8.66" y1="-5.00" x2="-8.66" y2="5.00"/><line x1="8.66" y1="5.00" x2="-8.66" y2="-5.00"/><line x1="0.00" y1="10.00" x2="-2.29" y2="6.72"/><line x1="0.00" y1="10.00" x2="2.29" y2="6.72"/><line x1="-8.66" y1="5.00" x2="-6.97" y2="1.37"/><line x1="-8.66" y1="5.00" x2="-4.68" y2="5.35"/><line x1="-8.66" y1="-5.00" x2="-4.68" y2="-5.35"/><line x1="-8.66" y1="-5.00" x2="-6.97" y2="-1.37"/><line x1="-0.00" y1="-10.00" x2="2.29" y2="-6.72"/><line x1="-0.00" y1="-10.00" x2="-2.29" y2="-6.72"/><line x1="8.66" y1="-5.00" x2="6.97" y2="-1.37"/><line x1="8.66" y1="-5.00" x2="4.68" y2="-5.35"/><line x1="8.66" y1="5.00" x2="4.68" y2="5.35"/><line x1="8.66" y1="5.00" x2="6.97" y2="1.37"/></g><text x="1376" y="58" font-size="16" font-weight="500" fill="#4a5063" text-anchor="start" >frozen</text><g transform="translate(1356,84) scale(0.85) translate(-12,-12)"><path d="M12 0.5C13.2 6 19.5 8 19.5 15.5C19.5 20.5 16 23.5 12 23.5C8 23.5 4.5 20.5 4.5 15.5C4.5 11.2 7.3 9.2 7.8 5.2C9.4 6.8 10.4 8 11 9.4C11.8 6.6 11.2 3.6 12 0.5Z" fill="#f2761c"/><path d="M12 23.5C9.4 23.5 7.6 21.6 7.6 19C7.6 16.4 9.9 14.8 12 12C14.1 14.8 16.4 16.4 16.4 19C16.4 21.6 14.6 23.5 12 23.5Z" fill="#ffc83d"/></g><text x="1376" y="90" font-size="16" font-weight="500" fill="#4a5063" text-anchor="start" >trained</text></g></svg></div>
+    <div class="pl"><svg class="pl-svg" viewBox="0 0 1490 700" role="img" aria-labelledby="pl-t pl-d" xmlns="http://www.w3.org/2000/svg">
+        <title id="pl-t">PathKGen pipeline</title>
+        <desc id="pl-d">
+          A whole slide image is tiled into 512 by 512 patches, encoded by a frozen CONCH patch encoder and a
+          frozen TITAN slide encoder, and projected into visual tokens. The slide embedding goes to an
+          auxiliary classifier that, together with the primary site, predicts a histology class used to
+          retrieve a subgraph from the pathology knowledge graph. The subgraph is converted to text and
+          tokenized into knowledge tokens. Together with the tokenized prompt, visual and knowledge tokens are
+          fed into the Qwen2.5 7B MLLM, which writes the pathology report.
+        </desc>
+        <defs>
+          <marker id="ah" viewBox="0 0 10 10" refX="9.2" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto">
+            <path d="M0,0.8 L9.4,5 L0,9.2 Z" fill="#8b91a3"/>
+          </marker>
+          <clipPath id="wclip">
+            <rect x="20" y="69" width="210" height="182" rx="8"/>
+          </clipPath>
+          <clipPath id="qclip">
+            <rect x="1213" y="54" width="58" height="58" rx="15"/>
+          </clipPath>
+          <linearGradient id="scg" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" stop-color="#7c3aed" stop-opacity="0"/>
+            <stop offset=".7" stop-color="#7c3aed" stop-opacity=".28"/>
+            <stop offset="1" stop-color="#7c3aed" stop-opacity=".5"/>
+          </linearGradient>
+          <filter id="sh" x="-10%" y="-10%" width="120%" height="130%">
+            <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#2b3358" flood-opacity=".12"/>
+          </filter>
+        </defs>
+        <!-- Panels -->
+        <rect x="310" y="20" width="450" height="280" rx="30" fill="#e8ebfd" />
+        <rect x="20" y="340" width="1055" height="240" rx="30" fill="#fbf0d8" />
+        <text x="332" y="292" font-size="19" font-weight="700" fill="#4153d6" text-anchor="start" >Vision encoder</text>
+        <text x="42" y="566" font-size="19" font-weight="700" fill="#b8841f" text-anchor="start" >Knowledge path</text>
+        <!-- Whole slide image and patch label -->
+        <rect x="20" y="69" width="210" height="182" rx="8" fill="#fff" filter="url(#sh)"/>
+        <image href="static/images/wsi.jpg" x="20" y="69" width="210" height="182" preserveAspectRatio="xMidYMid slice" clip-path="url(#wclip)"/>
+        <rect x="20.5" y="69.5" width="209" height="181" rx="8" fill="none" stroke="#dde0e8" stroke-width="1" />
+        <g clip-path="url(#wclip)">
+          <rect class="wsi-scan" x="20" y="69" width="60" height="182" fill="url(#scg)"/>
+        </g>
+        <text x="125" y="281" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" >Whole slide image</text>
+        <text x="290" y="118" font-size="16" font-weight="500" fill="#5b6275" text-anchor="middle" data-s="a-wsi">512×512</text>
+        <text x="290" y="138" font-size="16" font-weight="500" fill="#5b6275" text-anchor="middle" data-s="a-wsi">patches</text>
+        <!-- Arrows between stages (data-s keys drive pipeline.js) -->
+        <g stroke="#8b91a3" stroke-width="2.1" fill="none">
+          <line x1="236" y1="160" x2="330" y2="160" marker-end="url(#ah)" data-s="a-wsi"/>
+          <line x1="376" y1="62" x2="430" y2="62" marker-end="url(#ah)" data-s="a-te"/>
+          <line x1="559" y1="62" x2="610" y2="62" marker-end="url(#ah)" data-s="a-es"/>
+          <line x1="376" y1="97" x2="430" y2="97" marker-end="url(#ah)" data-s="a-te"/>
+          <line x1="559" y1="97" x2="610" y2="97" marker-end="url(#ah)" data-s="a-es"/>
+          <line x1="376" y1="132" x2="430" y2="132" marker-end="url(#ah)" data-s="a-te"/>
+          <line x1="559" y1="132" x2="610" y2="132" marker-end="url(#ah)" data-s="a-es"/>
+          <line x1="376" y1="188" x2="430" y2="188" marker-end="url(#ah)" data-s="a-te"/>
+          <line x1="559" y1="188" x2="610" y2="188" marker-end="url(#ah)" data-s="a-es"/>
+          <line x1="376" y1="223" x2="430" y2="223" marker-end="url(#ah)" data-s="a-te"/>
+          <line x1="559" y1="223" x2="610" y2="223" marker-end="url(#ah)" data-s="a-es"/>
+          <line x1="376" y1="258" x2="430" y2="258" marker-end="url(#ah)" data-s="a-te"/>
+          <line x1="559" y1="258" x2="610" y2="258" marker-end="url(#ah)" data-s="a-es"/>
+          <line x1="739" y1="152" x2="878" y2="152" marker-end="url(#ah)" data-s="a-vt"/>
+          <line x1="982" y1="152" x2="1136" y2="152" marker-end="url(#ah)" data-s="a-pv"/>
+          <path d="M674,266 V322 H264 V368" marker-end="url(#ah)" data-s="a-emb"/>
+          <line x1="264" y1="390" x2="264" y2="433" marker-end="url(#ah)" data-s="a-ec"/>
+          <line x1="147" y1="470" x2="176" y2="470" marker-end="url(#ah)" data-s="a-psc"/>
+          <line x1="302" y1="470" x2="336" y2="470" marker-end="url(#ah)" data-s="a-ch"/>
+          <line x1="434" y1="470" x2="468" y2="470" marker-end="url(#ah)" data-s="a-hp"/>
+          <line x1="630" y1="470" x2="656" y2="470" marker-end="url(#ah)" data-s="a-pg"/>
+          <line x1="773" y1="470" x2="804" y2="470" marker-end="url(#ah)" data-s="a-gt"/>
+          <line x1="1064" y1="470" x2="1136" y2="470" marker-end="url(#ah)" data-s="a-kt"/>
+          <line x1="1064" y1="638" x2="1136" y2="638" marker-end="url(#ah)" data-s="a-pt"/>
+        </g>
+        <!-- Patch tiles -->
+        <image class="tile" data-s="tile1" href="static/images/patches/patch1.jpg" x="336" y="46.5" width="38" height="31" preserveAspectRatio="xMidYMid slice"/>
+        <rect class="tile" data-s="tile1" x="336" y="46.5" width="38" height="31" fill="none" stroke="#c9cde0" stroke-width="1"/>
+        <image class="tile" data-s="tile2" href="static/images/patches/patch2.jpg" x="336" y="81.5" width="38" height="31" preserveAspectRatio="xMidYMid slice"/>
+        <rect class="tile" data-s="tile2" x="336" y="81.5" width="38" height="31" fill="none" stroke="#c9cde0" stroke-width="1"/>
+        <image class="tile" data-s="tile3" href="static/images/patches/patch3.jpg" x="336" y="116.5" width="38" height="31" preserveAspectRatio="xMidYMid slice"/>
+        <rect class="tile" data-s="tile3" x="336" y="116.5" width="38" height="31" fill="none" stroke="#c9cde0" stroke-width="1"/>
+        <image class="tile" data-s="tile4" href="static/images/patches/patch4.jpg" x="336" y="172.5" width="38" height="31" preserveAspectRatio="xMidYMid slice"/>
+        <rect class="tile" data-s="tile4" x="336" y="172.5" width="38" height="31" fill="none" stroke="#c9cde0" stroke-width="1"/>
+        <image class="tile" data-s="tile5" href="static/images/patches/patch5.jpg" x="336" y="207.5" width="38" height="31" preserveAspectRatio="xMidYMid slice"/>
+        <rect class="tile" data-s="tile5" x="336" y="207.5" width="38" height="31" fill="none" stroke="#c9cde0" stroke-width="1"/>
+        <image class="tile" data-s="tile6" href="static/images/patches/patch6.jpg" x="336" y="242.5" width="38" height="31" preserveAspectRatio="xMidYMid slice"/>
+        <rect class="tile" data-s="tile6" x="336" y="242.5" width="38" height="31" fill="none" stroke="#c9cde0" stroke-width="1"/>
+        <circle data-s="tile1" cx="355" cy="152" r="2" fill="#6a7190"/>
+        <circle data-s="tile1" cx="355" cy="160" r="2" fill="#6a7190"/>
+        <circle data-s="tile1" cx="355" cy="168" r="2" fill="#6a7190"/>
+        <rect x="432" y="38" width="125" height="228" rx="24" fill="#bcc3f7" stroke="#4a5bd8" stroke-width="2.2" data-s="pe"/>
+        <text transform="translate(494.5,152) rotate(-90)" font-size="20" font-weight="600" fill="#232634" text-anchor="middle" data-s="pe"><tspan x="0" y="-4.5">Patch encoder</tspan><tspan x="0" y="18.5">CONCH</tspan></text>
+        <circle cx="553" cy="40" r="14" fill="#fff" data-s="pe"/>
+        <g data-s="pe" transform="translate(553,40) scale(0.95)" stroke="#43a6ea" stroke-width="2.1" stroke-linecap="round" fill="none">
+          <line x1="-0.00" y1="-10.00" x2="0.00" y2="10.00"/>
+          <line x1="8.66" y1="-5.00" x2="-8.66" y2="5.00"/>
+          <line x1="8.66" y1="5.00" x2="-8.66" y2="-5.00"/>
+          <line x1="0.00" y1="10.00" x2="-2.29" y2="6.72"/>
+          <line x1="0.00" y1="10.00" x2="2.29" y2="6.72"/>
+          <line x1="-8.66" y1="5.00" x2="-6.97" y2="1.37"/>
+          <line x1="-8.66" y1="5.00" x2="-4.68" y2="5.35"/>
+          <line x1="-8.66" y1="-5.00" x2="-4.68" y2="-5.35"/>
+          <line x1="-8.66" y1="-5.00" x2="-6.97" y2="-1.37"/>
+          <line x1="-0.00" y1="-10.00" x2="2.29" y2="-6.72"/>
+          <line x1="-0.00" y1="-10.00" x2="-2.29" y2="-6.72"/>
+          <line x1="8.66" y1="-5.00" x2="6.97" y2="-1.37"/>
+          <line x1="8.66" y1="-5.00" x2="4.68" y2="-5.35"/>
+          <line x1="8.66" y1="5.00" x2="4.68" y2="5.35"/>
+          <line x1="8.66" y1="5.00" x2="6.97" y2="1.37"/>
+        </g>
+        <rect x="612" y="38" width="125" height="228" rx="24" fill="#bcc3f7" stroke="#4a5bd8" stroke-width="2.2" data-s="se"/>
+        <text transform="translate(674.5,152) rotate(-90)" font-size="20" font-weight="600" fill="#232634" text-anchor="middle" data-s="se"><tspan x="0" y="-4.5">Slide encoder</tspan><tspan x="0" y="18.5">TITAN</tspan></text>
+        <circle cx="733" cy="40" r="14" fill="#fff" data-s="se"/>
+        <g data-s="se" transform="translate(733,40) scale(0.95)" stroke="#43a6ea" stroke-width="2.1" stroke-linecap="round" fill="none">
+          <line x1="-0.00" y1="-10.00" x2="0.00" y2="10.00"/>
+          <line x1="8.66" y1="-5.00" x2="-8.66" y2="5.00"/>
+          <line x1="8.66" y1="5.00" x2="-8.66" y2="-5.00"/>
+          <line x1="0.00" y1="10.00" x2="-2.29" y2="6.72"/>
+          <line x1="0.00" y1="10.00" x2="2.29" y2="6.72"/>
+          <line x1="-8.66" y1="5.00" x2="-6.97" y2="1.37"/>
+          <line x1="-8.66" y1="5.00" x2="-4.68" y2="5.35"/>
+          <line x1="-8.66" y1="-5.00" x2="-4.68" y2="-5.35"/>
+          <line x1="-8.66" y1="-5.00" x2="-6.97" y2="-1.37"/>
+          <line x1="-0.00" y1="-10.00" x2="2.29" y2="-6.72"/>
+          <line x1="-0.00" y1="-10.00" x2="-2.29" y2="-6.72"/>
+          <line x1="8.66" y1="-5.00" x2="6.97" y2="-1.37"/>
+          <line x1="8.66" y1="-5.00" x2="4.68" y2="-5.35"/>
+          <line x1="8.66" y1="5.00" x2="4.68" y2="5.35"/>
+          <line x1="8.66" y1="5.00" x2="6.97" y2="1.37"/>
+        </g>
+        <rect x="880" y="38" width="100" height="228" rx="24" fill="#bcc3f7" stroke="#4a5bd8" stroke-width="2.2" data-s="pr"/>
+        <text transform="translate(930,152) rotate(-90)" font-size="20" font-weight="600" fill="#232634" text-anchor="middle" data-s="pr"><tspan x="0" y="-4.5">Projection</tspan><tspan x="0" y="18.5">Layer</tspan></text>
+        <circle cx="976" cy="40" r="14" fill="#fff" data-s="pr"/>
+        <g data-s="pr" transform="translate(976,40) scale(0.8) translate(-12,-12)">
+          <path d="M12 0.5C13.2 6 19.5 8 19.5 15.5C19.5 20.5 16 23.5 12 23.5C8 23.5 4.5 20.5 4.5 15.5C4.5 11.2 7.3 9.2 7.8 5.2C9.4 6.8 10.4 8 11 9.4C11.8 6.6 11.2 3.6 12 0.5Z" fill="#f2761c"/>
+          <path d="M12 23.5C9.4 23.5 7.6 21.6 7.6 19C7.6 16.4 9.9 14.8 12 12C14.1 14.8 16.4 16.4 16.4 19C16.4 21.6 14.6 23.5 12 23.5Z" fill="#ffc83d"/>
+        </g>
+        <text x="808" y="138" font-size="17" font-weight="700" fill="#4153d6" text-anchor="middle" data-s="a-vt">Visual tokens</text>
+        <!-- Token columns v, k and p -->
+        <g transform="translate(30,0)">
+          <g stroke="#8b91a3" stroke-width="2.1" fill="none">
+            <line x1="1136" y1="62" x2="1198" y2="62" marker-end="url(#ah)" data-s="a-v0"/>
+            <line x1="1136" y1="98" x2="1198" y2="98" marker-end="url(#ah)" data-s="a-v1"/>
+            <line x1="1136" y1="134" x2="1198" y2="134" marker-end="url(#ah)" data-s="a-v2"/>
+            <line x1="1136" y1="170" x2="1198" y2="170" marker-end="url(#ah)" data-s="a-v3"/>
+            <line x1="1136" y1="206" x2="1198" y2="206" marker-end="url(#ah)" data-s="a-v4"/>
+            <line x1="1136" y1="242" x2="1198" y2="242" marker-end="url(#ah)" data-s="a-v5"/>
+            <line x1="1136" y1="380" x2="1198" y2="380" marker-end="url(#ah)" data-s="a-k0"/>
+            <line x1="1136" y1="416" x2="1198" y2="416" marker-end="url(#ah)" data-s="a-k1"/>
+            <line x1="1136" y1="452" x2="1198" y2="452" marker-end="url(#ah)" data-s="a-k2"/>
+            <line x1="1136" y1="488" x2="1198" y2="488" marker-end="url(#ah)" data-s="a-k3"/>
+            <line x1="1136" y1="524" x2="1198" y2="524" marker-end="url(#ah)" data-s="a-k4"/>
+            <line x1="1136" y1="560" x2="1198" y2="560" marker-end="url(#ah)" data-s="a-k5"/>
+            <line x1="1136" y1="605" x2="1198" y2="605" marker-end="url(#ah)" data-s="a-p0"/>
+            <line x1="1136" y1="638" x2="1198" y2="638" marker-end="url(#ah)" data-s="a-p1"/>
+            <line x1="1136" y1="671" x2="1198" y2="671" marker-end="url(#ah)" data-s="a-p2"/>
+            <line x1="1288" y1="357" x2="1340" y2="357" marker-end="url(#ah)" data-s="a-doc"/>
+          </g>
+          <rect x="1110" y="51" width="24" height="24" rx="5" fill="#4357d8" class="tk" data-s="v0"/>
+          <rect x="1110" y="87" width="24" height="24" rx="5" fill="#4357d8" class="tk" data-s="v1"/>
+          <rect x="1110" y="123" width="24" height="24" rx="5" fill="#4357d8" class="tk" data-s="v2"/>
+          <rect x="1110" y="159" width="24" height="24" rx="5" fill="#4357d8" class="tk" data-s="v3"/>
+          <rect x="1110" y="195" width="24" height="24" rx="5" fill="#4357d8" class="tk" data-s="v4"/>
+          <rect x="1110" y="231" width="24" height="24" rx="5" fill="#4357d8" class="tk" data-s="v5"/>
+          <rect x="1110" y="369" width="24" height="24" rx="5" fill="#d9962f" class="tk" data-s="k0"/>
+          <rect x="1110" y="405" width="24" height="24" rx="5" fill="#d9962f" class="tk" data-s="k1"/>
+          <rect x="1110" y="441" width="24" height="24" rx="5" fill="#d9962f" class="tk" data-s="k2"/>
+          <rect x="1110" y="477" width="24" height="24" rx="5" fill="#d9962f" class="tk" data-s="k3"/>
+          <rect x="1110" y="513" width="24" height="24" rx="5" fill="#d9962f" class="tk" data-s="k4"/>
+          <rect x="1110" y="549" width="24" height="24" rx="5" fill="#d9962f" class="tk" data-s="k5"/>
+          <rect x="1110" y="594" width="24" height="24" rx="5" fill="#ea7d62" class="tk" data-s="p0"/>
+          <rect x="1110" y="627" width="24" height="24" rx="5" fill="#ea7d62" class="tk" data-s="p1"/>
+          <rect x="1110" y="660" width="24" height="24" rx="5" fill="#ea7d62" class="tk" data-s="p2"/>
+          <text x="1100" y="252" font-size="19" font-weight="700" fill="#4153d6" text-anchor="end" data-s="v0">v</text>
+          <text x="1100" y="574" font-size="19" font-weight="700" fill="#b8841f" text-anchor="end" data-s="k0">k</text>
+          <text x="1100" y="694" font-size="19" font-weight="700" fill="#d4604a" text-anchor="end" data-s="p0">p</text>
+        </g>
+        <text x="1104" y="456" font-size="15" font-weight="500" fill="#5b6275" text-anchor="middle" data-s="a-kt">Tokenize</text>
+        <text x="1104" y="624" font-size="15" font-weight="500" fill="#5b6275" text-anchor="middle" data-s="a-pt">Tokenize</text>
+        <rect x="40" y="435" width="107" height="70" rx="16" fill="#f6d98e" stroke="#d9a13a" stroke-width="2.2" data-s="ps"/>
+        <text x="93.5" y="466.0" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" data-s="ps">Primary</text>
+        <text x="93.5" y="487.0" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" data-s="ps">site</text>
+        <rect x="178" y="435" width="124" height="70" rx="16" fill="#f6d98e" stroke="#d9a13a" stroke-width="2.2" data-s="cl"/>
+        <text x="240.0" y="466.0" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" data-s="cl">Auxiliary</text>
+        <text x="240.0" y="487.0" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" data-s="cl">classifier</text>
+        <rect x="336" y="445" width="98" height="50" rx="16" fill="#f6d98e" stroke="#d9a13a" stroke-width="2.2" data-s="hc"/>
+        <text x="385.0" y="466.0" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" data-s="hc">Histology</text>
+        <text x="385.0" y="487.0" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" data-s="hc">class</text>
+        <rect x="468" y="435" width="162" height="70" rx="16" fill="#f6d98e" stroke="#d9a13a" stroke-width="2.2" data-s="pg"/>
+        <text x="549.0" y="466.0" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" data-s="pg">Pathology</text>
+        <text x="549.0" y="487.0" font-size="17" font-weight="600" fill="#232634" text-anchor="middle" data-s="pg">Knowledge Graph</text>
+        <rect x="222" y="370" width="14" height="18" rx="0" fill="#f6d98e" stroke="#d9a13a" stroke-width="1.3" data-s="emb"/>
+        <rect x="236" y="370" width="14" height="18" rx="0" fill="#f6d98e" stroke="#d9a13a" stroke-width="1.3" data-s="emb"/>
+        <rect x="250" y="370" width="14" height="18" rx="0" fill="#f6d98e" stroke="#d9a13a" stroke-width="1.3" data-s="emb"/>
+        <rect x="264" y="370" width="14" height="18" rx="0" fill="#f6d98e" stroke="#d9a13a" stroke-width="1.3" data-s="emb"/>
+        <rect x="278" y="370" width="14" height="18" rx="0" fill="#f6d98e" stroke="#d9a13a" stroke-width="1.3" data-s="emb"/>
+        <rect x="292" y="370" width="14" height="18" rx="0" fill="#f6d98e" stroke="#d9a13a" stroke-width="1.3" data-s="emb"/>
+        <text x="318" y="385" font-size="15" font-weight="500" fill="#5b6275" text-anchor="start" data-s="emb">Slide embeddings</text>
+        <!-- Retrieved subgraph -->
+        <line data-s="sg1" x1="716" y1="470" x2="716.0" y2="424.0" stroke="#a9aebd" stroke-width="1.6"/>
+        <line data-s="sg2" x1="716" y1="470" x2="755.8" y2="447.0" stroke="#a9aebd" stroke-width="1.6"/>
+        <line data-s="sg3" x1="716" y1="470" x2="755.8" y2="493.0" stroke="#a9aebd" stroke-width="1.6"/>
+        <line data-s="sg4" x1="716" y1="470" x2="716.0" y2="516.0" stroke="#a9aebd" stroke-width="1.6"/>
+        <line data-s="sg5" x1="716" y1="470" x2="676.2" y2="493.0" stroke="#a9aebd" stroke-width="1.6"/>
+        <line data-s="sg6" x1="716" y1="470" x2="676.2" y2="447.0" stroke="#a9aebd" stroke-width="1.6"/>
+        <circle data-s="sg1" cx="716.0" cy="424.0" r="11" fill="#f6c3a0" stroke="#8d93a8" stroke-width="1.2"/>
+        <circle data-s="sg2" cx="755.8" cy="447.0" r="11" fill="#f5c3e4" stroke="#8d93a8" stroke-width="1.2"/>
+        <circle data-s="sg3" cx="755.8" cy="493.0" r="11" fill="#f4ec8e" stroke="#8d93a8" stroke-width="1.2"/>
+        <circle data-s="sg4" cx="716.0" cy="516.0" r="11" fill="#bcd9f3" stroke="#8d93a8" stroke-width="1.2"/>
+        <circle data-s="sg5" cx="676.2" cy="493.0" r="11" fill="#c3e5b8" stroke="#8d93a8" stroke-width="1.2"/>
+        <circle data-s="sg6" cx="676.2" cy="447.0" r="11" fill="#c7c2f6" stroke="#8d93a8" stroke-width="1.2"/>
+        <circle data-s="sg0" cx="716" cy="470" r="13" fill="#f4c542" stroke="#c9972a" stroke-width="1.4"/>
+        <text x="716" y="548" font-size="16" font-weight="600" fill="#232634" text-anchor="middle" data-s="sg0">Retrieved</text>
+        <text x="716" y="567" font-size="16" font-weight="600" fill="#232634" text-anchor="middle" data-s="sg0">subgraph</text>
+        <!-- Subgraph serialized as text -->
+        <foreignObject data-s="tb" x="806" y="410" width="254" height="120">
+          <div class="pl-kt"><b>histology:</b> papillary renal cell carcinoma,<br>
+          <b>growth patterns:</b> <mark style="background:#f7cdb0">papillary pattern</mark>,<br>
+          <b>cytological features:</b> <mark style="background:#cfcaf7">abundant cytoplasm</mark>,<br>
+          <b>background features:</b> <mark style="background:#f6cfe9">foam cells</mark>,<br>
+          <b>has invasive patterns:</b> <mark style="background:#f8f2a6">vascular invasion</mark>,<br>
+          <b>nuclear features:</b> <mark style="background:#cfe9c6">irregular nuclei</mark>,<br>
+          <b>found in:</b> <mark style="background:#cfe4f7">kidney</mark></div>
+        </foreignObject>
+        <rect x="178" y="612" width="882" height="52" rx="14" fill="#eceef3" data-s="pm"/>
+        <text data-s="pm" x="198" y="644" font-size="16.5" fill="#3b4252" font-weight="500" text-anchor="start"><tspan font-weight="700">Prompt:</tspan> “With the help of the knowledge provided, describe the histology of the Whole Slide Image.”</text>
+        <g transform="translate(30,0)">
+          <rect x="1200" y="30" width="84" height="655" rx="26" fill="#1b2132" class="llm-body" data-s="llm"/>
+          <rect data-s="llm" x="1213" y="54" width="58" height="58" rx="15" fill="#fff"/>
+          <image data-s="llm" href="static/images/Qwen_logo.svg" x="1219" y="60" width="46" height="46"/>
+          <circle cx="1278" cy="34" r="14" fill="#fff" data-s="llm"/>
+          <g data-s="llm" transform="translate(1278,34) scale(0.8) translate(-12,-12)">
+            <path d="M12 0.5C13.2 6 19.5 8 19.5 15.5C19.5 20.5 16 23.5 12 23.5C8 23.5 4.5 20.5 4.5 15.5C4.5 11.2 7.3 9.2 7.8 5.2C9.4 6.8 10.4 8 11 9.4C11.8 6.6 11.2 3.6 12 0.5Z" fill="#f2761c"/>
+            <path d="M12 23.5C9.4 23.5 7.6 21.6 7.6 19C7.6 16.4 9.9 14.8 12 12C14.1 14.8 16.4 16.4 16.4 19C16.4 21.6 14.6 23.5 12 23.5Z" fill="#ffc83d"/>
+          </g>
+          <text data-s="llm" transform="translate(1236,420) rotate(-90)" text-anchor="middle" fill="#fff"><tspan x="0" y="0" font-size="23" font-weight="700">MLLM (Qwen2.5 7B)</tspan><tspan x="0" y="24" font-size="14.5" font-weight="500" fill="#aab1c8">+ prompt, QLoRA</tspan></text>
+          <path d="M1345,290 Q1345,282 1353,282 L1430,282 L1455,307 L1455,424 Q1455,432 1447,432 L1353,432 Q1345,432 1345,424 Z" fill="#f4f5f9" stroke="#d3d8e3" stroke-width="1.6" filter="url(#sh)" data-s="doc"/>
+          <path data-s="doc" d="M1430,282 L1430,299 Q1430,307 1438,307 L1455,307 Z" fill="#e3e7f0" stroke="#d3d8e3" stroke-width="1.6" stroke-linejoin="round"/>
+          <text x="1362" y="331" font-size="17" font-weight="700" fill="#232634" text-anchor="start" data-s="doc">Pathology</text>
+          <text x="1362" y="352" font-size="17" font-weight="700" fill="#232634" text-anchor="start" data-s="doc">report</text>
+          <rect x="1362" y="370" width="76" height="6" rx="3" fill="#cdd2de" class="rb" data-s="rb0"/>
+          <rect x="1362" y="384" width="68" height="6" rx="3" fill="#cdd2de" class="rb" data-s="rb1"/>
+          <rect x="1362" y="398" width="76" height="6" rx="3" fill="#cdd2de" class="rb" data-s="rb2"/>
+          <rect x="1362" y="412" width="46" height="6" rx="3" fill="#cdd2de" class="rb" data-s="rb3"/>
+          <g transform="translate(1356,52) scale(0.95)" stroke="#43a6ea" stroke-width="2.1" stroke-linecap="round" fill="none">
+            <line x1="-0.00" y1="-10.00" x2="0.00" y2="10.00"/>
+            <line x1="8.66" y1="-5.00" x2="-8.66" y2="5.00"/>
+            <line x1="8.66" y1="5.00" x2="-8.66" y2="-5.00"/>
+            <line x1="0.00" y1="10.00" x2="-2.29" y2="6.72"/>
+            <line x1="0.00" y1="10.00" x2="2.29" y2="6.72"/>
+            <line x1="-8.66" y1="5.00" x2="-6.97" y2="1.37"/>
+            <line x1="-8.66" y1="5.00" x2="-4.68" y2="5.35"/>
+            <line x1="-8.66" y1="-5.00" x2="-4.68" y2="-5.35"/>
+            <line x1="-8.66" y1="-5.00" x2="-6.97" y2="-1.37"/>
+            <line x1="-0.00" y1="-10.00" x2="2.29" y2="-6.72"/>
+            <line x1="-0.00" y1="-10.00" x2="-2.29" y2="-6.72"/>
+            <line x1="8.66" y1="-5.00" x2="6.97" y2="-1.37"/>
+            <line x1="8.66" y1="-5.00" x2="4.68" y2="-5.35"/>
+            <line x1="8.66" y1="5.00" x2="4.68" y2="5.35"/>
+            <line x1="8.66" y1="5.00" x2="6.97" y2="1.37"/>
+          </g>
+          <text x="1376" y="58" font-size="16" font-weight="500" fill="#4a5063" text-anchor="start" >frozen</text>
+          <g transform="translate(1356,84) scale(0.85) translate(-12,-12)">
+            <path d="M12 0.5C13.2 6 19.5 8 19.5 15.5C19.5 20.5 16 23.5 12 23.5C8 23.5 4.5 20.5 4.5 15.5C4.5 11.2 7.3 9.2 7.8 5.2C9.4 6.8 10.4 8 11 9.4C11.8 6.6 11.2 3.6 12 0.5Z" fill="#f2761c"/>
+            <path d="M12 23.5C9.4 23.5 7.6 21.6 7.6 19C7.6 16.4 9.9 14.8 12 12C14.1 14.8 16.4 16.4 16.4 19C16.4 21.6 14.6 23.5 12 23.5Z" fill="#ffc83d"/>
+          </g>
+          <text x="1376" y="90" font-size="16" font-weight="500" fill="#4a5063" text-anchor="start" >trained</text>
+        </g>
+      </svg></div>
 
     <h3>Knowledge graph curation</h3>
     <p class="lead">
@@ -295,16 +436,53 @@ footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;b
       relations are categorized by semantic type; and pathologists verify the final graph.
     </p>
 
-    <figure style="width: 65%; max-width: 850px; margin: 20px auto;">
+    <figure class="fig-narrow">
       <img src="static/images/graph_curating.png"
            alt="Knowledge graph curation pipeline"
-           loading="lazy"
-           style="display: block; width: 100%; height: auto;">
+           loading="lazy">
     </figure>
   </div>
 </section>
 
-<section id="results" class="alt-bg"><div class="wrap">
+<section id="explain" class="alt-bg"><div class="wrap">
+  <h2>Qualitative Results &amp; Explainability</h2>
+  <p class="lead">The retrieved subgraph is shown next to each generated report. Features supported by the slide are green, features with no evidence are red, and the predicted histology is blue. The model also learns connections absent from the graph (isolated green nodes) and uses negation, where absent features serve as diagnostic evidence.</p>
+
+  <div class="qx" id="qx" data-examples="static/data/examples.json" data-graph="static/graph/relations.csv">
+    <div class="qx-tabs" role="tablist" aria-label="Qualitative examples"></div>
+
+    <div class="qx-row">
+      <div class="qx-wsi">
+        <img alt="">
+        <p><em>Taken from:</em> <b class="qx-site"></b></p>
+      </div>
+
+      <div class="qx-graph">
+        <div class="qx-legend" aria-hidden="true">
+          <span><i class="b"></i>Predicted histology</span><span><i class="g"></i>Present</span>
+          <span><i class="r"></i>Not present</span><span><i class="n"></i>Other nodes</span>
+        </div>
+        <div class="qx-stage">
+          <canvas role="img" aria-label="Interactive knowledge graph. The extracted subgraph of the selected example is highlighted in green (present), red (not present) and blue (predicted histology)."></canvas>
+          <div class="qx-status" role="status"></div>
+        </div>
+        <div class="qx-ctl">
+          <button type="button" data-act="in" title="Zoom in" aria-label="Zoom in">+</button>
+          <button type="button" data-act="out" title="Zoom out" aria-label="Zoom out">&minus;</button>
+          <button type="button" data-act="focus" title="Zoom to the extracted subgraph">Focus subgraph</button>
+          <button type="button" data-act="all" title="Show the whole graph">Full graph</button>
+          <button type="button" data-act="reset" title="Restore the original layout">Reset</button>
+        </div>
+      </div>
+
+      <div class="qx-out"><p class="qx-report" aria-live="polite"></p></div>
+    </div>
+
+    <p class="qx-hint">Drag nodes to rearrange them or the background to pan. Click the graph, then scroll to zoom. Hover a phrase or node to link them.</p>
+  </div>
+</div></section>
+
+<section id="results"><div class="wrap">
   <h2>Results &amp; Evaluation</h2>
   <h3>1. Report generation on WSI-Bench</h3>
   <p class="lead">PathKGen outperforms existing WSI MLLMs on most metrics, including a 9.09% relative gain in the LLM-as-a-Judge WSI-Precision.</p>
@@ -354,15 +532,6 @@ footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;b
 
 </div></section>
 
-<section id="explain"><div class="wrap">
-  <h2>Qualitative Results &amp; Explainability</h2>
-  <p class="lead">The retrieved subgraph is shown next to each generated report. Features supported by the slide are green, features with no evidence are red, and the predicted histology is blue. The model also learns connections absent from the graph (isolated green nodes) and uses negation, where absent features serve as diagnostic evidence.</p>
-  <div class="legend"><span><i style="background:#1b8a4b"></i>Present in WSI</span><span><i style="background:#d6336c"></i>No evidence</span><span><i style="background:#2563eb"></i>Predicted histology</span></div>
-  <figure>
-    <img src="static/images/full_examples.jpg" alt="Additional qualitative examples" loading="lazy">
-  </figure>
-</div></section>
-
 <section id="graph" class="alt-bg"><div class="wrap">
   <h2>Curated Pathology Knowledge Graph</h2>
   <p class="lead">The graph has 177 nodes and 317 edges across 31 histology classes. It is sparse yet cohesive (density 0.01, average out-degree 1.79). Relations fall into six categories: cytological feature (71), growth pattern (69), nuclear feature (57), invasion pattern (50), background feature (42) and found in (28).</p>
@@ -397,148 +566,9 @@ footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;b
 <button id="top" aria-label="Back to top">↑</button>
 <div id="lb"><img alt=""></div>
 
-<script>
-(function(){
-  var top=document.getElementById('top'),lb=document.getElementById('lb'),lbi=lb.querySelector('img');
-  window.addEventListener('scroll',function(){top.classList.toggle('on',window.scrollY>500)});
-  top.onclick=function(){window.scrollTo({top:0,behavior:'smooth'})};
-  document.querySelectorAll('figure img').forEach(function(i){
-    i.addEventListener('click',function(){lbi.src=i.src;lbi.alt=i.alt;lb.classList.add('on')});
-  });
-  lb.onclick=function(){lb.classList.remove('on')};
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
-  document.getElementById('copy').onclick=function(){
-    var b=this,t=document.getElementById('bib').innerText;
-    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='Copied!'}).catch(function(){b.textContent='Press Ctrl+C'});
-    setTimeout(function(){b.textContent='Copy'},1800);
-  };
-})();
-</script>
-<script>
-(function(){
-  var el=document.getElementById('tz');if(!el)return;
-  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  var full=el.querySelector('.tz-full'),typed=el.querySelector('.tz-typed');
-  el.classList.add('anim');
-  var segs=[];
-  Array.prototype.forEach.call(full.childNodes,function(n){
-    if(n.nodeType===3)segs.push({t:n.textContent});
-    else if(n.nodeType===1)segs.push({t:n.textContent,c:n.className,k:(n.getAttribute('data-k')||'').split(' ').filter(Boolean)});
-  });
-  var seen=true,waiters=[];
-  if('IntersectionObserver' in window){
-    seen=false;
-    new IntersectionObserver(function(e){
-      seen=e[0].isIntersecting;
-      if(seen){var w=waiters;waiters=[];w.forEach(function(f){f()})}
-    },{threshold:.2}).observe(el);
-  }
-  function sleep(ms){return new Promise(function(r){setTimeout(function(){seen?r():waiters.push(r)},ms)})}
-  function hot(ks,on){ks.forEach(function(k){Array.prototype.forEach.call(el.querySelectorAll('[data-k="'+k+'"]'),function(n){n.classList.toggle('hot',on)})})}
-  var cur=document.createElement('span');cur.className='tz-cur';
-  async function typeAll(){
-    typed.textContent='';typed.appendChild(cur);
-    for(var s=0;s<segs.length;s++){
-      var seg=segs[s],span=document.createElement('span');
-      if(seg.c)span.className=seg.c;
-      typed.insertBefore(span,cur);
-      hot(seg.k||[],true);
-      for(var i=0;i<seg.t.length;){
-        var step=2+(Math.random()<.3?1:0);
-        span.textContent+=seg.t.slice(i,i+step);i+=step;
-        var ch=seg.t.charAt(i-1);
-        await sleep(ch==='.'?280:ch===','?120:22+Math.random()*14);
-      }
-      hot(seg.k||[],false);
-    }
-  }
-  (async function(){
-    for(;;){
-      typed.textContent='';
-      await sleep(1000);
-      await typeAll();
-      await sleep(8000);
-    }
-  })();
-})();
-</script>
 
-<script id="pl-anim">
-(function(){
-  var svg=document.querySelector('.pl-svg');if(!svg)return;
-  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  var NS='http://www.w3.org/2000/svg',B='#4a5bd8',A='#d9962f',C='#e0674c',P='#7c3aed';
-  svg.classList.add('anim');
-  var seen=!('IntersectionObserver' in window),waiters=[];
-  if(!seen)new IntersectionObserver(function(e){seen=e[0].isIntersecting;if(seen){var w=waiters;waiters=[];w.forEach(function(f){f()})}},{threshold:.25}).observe(svg);
-  function sleep(ms){return new Promise(function(r){setTimeout(function(){seen?r():waiters.push(r)},ms)})}
-  function q(k){return svg.querySelectorAll('[data-s~="'+k+'"]')}
-  function lit(k){Array.prototype.forEach.call(q(k),function(n){n.classList.add('on')})}
-  function travel(el,color,ms){
-    return new Promise(function(res){
-      var L=el.getTotalLength(),c=document.createElementNS(NS,'circle');
-      c.setAttribute('r','5');c.setAttribute('fill',color);c.setAttribute('stroke','#fff');c.setAttribute('stroke-width','1.5');
-      el.parentNode.appendChild(c);var n=Math.max(2,Math.round(ms/16)),k=0;
-      var iv=setInterval(function(){
-        k++;var p=k/n,e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2,pt=el.getPointAtLength(L*Math.min(1,e));
-        c.setAttribute('cx',pt.x);c.setAttribute('cy',pt.y);
-        if(k>=n){clearInterval(iv);c.remove();res()}
-      },16);
-    });
-  }
-  function go(k,color,ms){
-    lit(k);var ps=[];
-    Array.prototype.forEach.call(q(k),function(n){if(n.tagName==='line'||n.tagName==='path')ps.push(travel(n,color,ms||450))});
-    return Promise.all(ps);
-  }
-  async function tokens(pre,n,color){
-    for(var i=0;i<n;i++){lit(pre+i);go('a-'+pre+i,color,300);await sleep(190)}
-    await sleep(300);
-  }
-  function reset(){
-    svg.classList.remove('scan','glow');
-    Array.prototype.forEach.call(svg.querySelectorAll('.on'),function(n){n.classList.remove('on')});
-  }
-  async function run(){
-    for(;;){
-      reset();await sleep(900);
-      // slide -> patches
-      svg.classList.add('scan');await sleep(1000);
-      await go('a-wsi',B,500);
-      for(var i=1;i<=6;i++){lit('tile'+i);await sleep(140)}
-      await sleep(250);
-      // vision branch
-      await go('a-te',B,550);lit('pe');await sleep(200);
-      await go('a-es',B,550);lit('se');await sleep(200);
-      await go('a-vt',B,550);lit('pr');await sleep(200);
-      await go('a-pv',B,750);
-      await tokens('v',6,B);
-      // knowledge branch
-      await Promise.all([go('a-emb',A,1000),(async function(){await sleep(300);lit('ps');await go('a-psc',A,350)})()]);
-      lit('emb');await sleep(250);
-      await go('a-ec',A,350);lit('cl');await sleep(150);
-      await go('a-ch',A,350);lit('hc');await sleep(150);
-      await go('a-hp',A,350);lit('pg');await sleep(150);
-      await go('a-pg',A,350);lit('sg0');
-      for(var j=1;j<=6;j++){lit('sg'+j);await sleep(110)}
-      await sleep(200);
-      await go('a-gt',A,350);lit('tb');await sleep(350);
-      await go('a-kt',A,650);
-      await tokens('k',6,A);
-      // prompt
-      lit('pm');await sleep(350);
-      await go('a-pt',C,650);
-      await tokens('p',3,C);
-      // LLM -> report
-      lit('llm');svg.classList.add('glow');await sleep(1000);
-      await go('a-doc',P,550);lit('doc');await sleep(250);
-      for(var r=0;r<4;r++){lit('rb'+r);await sleep(280)}
-      await sleep(400);svg.classList.remove('glow');
-      await sleep(4500);
-    }
-  }
-  run();
-})();
-</script>
+
+
+
 </body>
 </html>

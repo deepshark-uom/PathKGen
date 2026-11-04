@@ -1,0 +1,180 @@
+[
+  {
+    "tab": "Urothelial carcinoma",
+    "site": "Bladder",
+    "image": "static/images/examples/bladder.jpg",
+    "alt": "Whole slide image of a bladder specimen",
+    "center": { "id": "Bladder Urothelial Carcinoma", "label": "Bladder urothelial carcinoma" },
+    "present": [
+      { "id": "Infiltrative Growth Pattern", "label": "Infiltrating" },
+      { "id": "Muscle Invasion", "label": "Muscularis propria" },
+      { "id": "Nuclear pleomorphism", "label": "Nuclear pleomorphism" },
+      { "id": "Prominent nucleoli", "label": "Prominent nucleoli" },
+      { "id": "High Mitotic Activity", "label": "High mitotic activity" },
+      { "id": "Lymph-vascular invasion", "label": "Lympho-vascular invasion" },
+      { "id": "Necrosis", "label": "Necrosis" }
+    ],
+    "absent": [],
+    "report": [
+      { "t": "Microscopic observation of the pathology slide reveals a high-grade urothelial carcinoma characterized by poorly differentiated tumor cells " },
+      { "t": "infiltrating", "n": "Infiltrative Growth Pattern" },
+      { "t": " the bladder wall, " },
+      { "t": "extending through the muscularis propria", "n": "Muscle Invasion" },
+      { "t": " into the perivesical adipose tissue. The tumor cells exhibit marked " },
+      { "t": "nuclear pleomorphism", "n": "Nuclear pleomorphism" },
+      { "t": " with " },
+      { "t": "prominent nucleoli", "n": "Prominent nucleoli" },
+      { "t": " and " },
+      { "t": "frequent mitotic figures", "n": "High Mitotic Activity" },
+      { "t": ", indicating a high rate of cell division. There is evidence of " },
+      { "t": "lymphovascular invasion", "n": "Lymph-vascular invasion" },
+      { "t": ", as tumor cells are present within lymphatic and blood vessels, suggesting potential for metastatic spread. " },
+      { "t": "Necrosis", "n": "Necrosis" },
+      { "t": " is observed within the tumor mass, indicating areas of tumor cell death. Based on these observations, the diagnosis is high-grade (G3) " },
+      { "t": "urothelial carcinoma", "dx": true },
+      { "t": "." }
+    ]
+  },
+  {
+    "tab": "Ductal carcinoma",
+    "site": "Breast",
+    "image": "static/images/examples/breast.jpg",
+    "alt": "Whole slide image of a breast specimen",
+    "center": { "id": "Breast Invasive Carcinoma", "label": "Breast invasive ductal carcinoma" },
+    "present": [
+      { "id": "Epithelial Cells", "label": "Epithelial cells" },
+      { "id": "Glandular", "label": "Glandular" },
+      { "id": "Nuclear pleomorphism", "label": "Nuclear pleomorphism" },
+      { "id": "High Mitotic Activity", "label": "High mitotic activity" },
+      { "id": "Vascular invasion by tumor", "label": "Vascular invasion" },
+      { "id": "Necrosis", "label": "Necrosis" }
+    ],
+    "absent": [],
+    "report": [
+      { "t": "Microscopic observation of the pathology slide reveals poorly differentiated " },
+      { "t": "epithelial cells", "n": "Epithelial Cells" },
+      { "t": " infiltrating the surrounding stroma with minimal formation of " },
+      { "t": "glandular", "n": "Glandular" },
+      { "t": " structures, significantly deviating from the normal tissue architecture. The nuclei exhibit marked variability in size and shape, indicative of high " },
+      { "t": "nuclear pleomorphism", "n": "Nuclear pleomorphism" },
+      { "t": ". There is a high rate of cell division observed, corresponding to a " },
+      { "t": "high mitotic count", "n": "High Mitotic Activity" },
+      { "t": ". " },
+      { "t": "Vascular invasion", "n": "Vascular invasion by tumor" },
+      { "t": " is present, as evidenced by tumor cells within blood vessels. Areas of " },
+      { "t": "necrosis", "n": "Necrosis" },
+      { "t": " are evident within the tumor. Based on these observations, the diagnosis is " },
+      { "t": "invasive ductal carcinoma", "dx": true },
+      { "t": ", poorly differentiated, histologic grade 3." }
+    ]
+  },
+  {
+    "tab": "Squamous cell carcinoma",
+    "site": "Lung",
+    "image": "static/images/examples/lung.jpg",
+    "alt": "Whole slide image of a lung specimen",
+    "center": { "id": "Lung Squamous Cell Carcinoma", "label": "Lung squamous cell carcinoma" },
+    "present": [
+      { "id": "Atypical Squamous Cells", "label": "Atypical squamous cells" },
+      { "id": "Intercellular bridges", "label": "Intercellular bridges" },
+      { "id": "Keratinization", "label": "Keratinization" },
+      { "id": "Nuclear pleomorphism", "label": "Nuclear pleomorphism" },
+      { "id": "Prominent nucleoli", "label": "Prominent nucleoli" }
+    ],
+    "absent": [
+      { "id": "Vascular invasion by tumor", "label": "Vascular invasion" },
+      { "id": "Necrosis", "label": "Necrosis" }
+    ],
+    "report": [
+      { "t": "Microscopic observation of the pathology slide reveals a moderately differentiated squamous cell carcinoma characterized by irregular nests and sheets of " },
+      { "t": "atypical squamous cells", "n": "Atypical Squamous Cells" },
+      { "t": " with " },
+      { "t": "intercellular bridges", "n": "Intercellular bridges" },
+      { "t": " and " },
+      { "t": "keratinization", "n": "Keratinization" },
+      { "t": ". The tumor cells exhibit moderate " },
+      { "t": "nuclear pleomorphism", "n": "Nuclear pleomorphism" },
+      { "t": " with " },
+      { "t": "prominent nucleoli", "n": "Prominent nucleoli" },
+      { "t": ". Mitotic figures are present, indicating a moderate rate of cell division. There is " },
+      { "t": "no evidence of ", "neg": true },
+      { "t": "vascular invasion", "n": "Vascular invasion by tumor" },
+      { "t": " or " },
+      { "t": "necrosis", "n": "Necrosis" },
+      { "t": " within the examined tissue. Based on these observations, the diagnosis is " },
+      { "t": "squamous cell carcinoma", "dx": true },
+      { "t": ", moderately differentiated." }
+    ]
+  },
+  {
+    "tab": "B-cell lymphoma",
+    "site": "Lymph node",
+    "image": "static/images/examples/lymphoma.jpg",
+    "alt": "Whole slide image of a lymphoid specimen",
+    "center": { "id": "Lymphoid Neoplasm Diffuse Large B-cell Lymphoma", "label": "B-cell lymphoma" },
+    "present": [
+      { "id": "Large Cell", "label": "Large cell" },
+      { "id": "Hyperchromatic nuclei", "label": "Hyperchromatic nuclei" },
+      { "id": "Prominent nucleoli", "label": "Prominent nucleoli" },
+      { "id": "Nuclear pleomorphism", "label": "Nuclear pleomorphism" },
+      { "id": "Increased Mitotic Figures", "label": "Increased mitotic figures" },
+      { "id": "Necrosis", "label": "Necrosis" }
+    ],
+    "absent": [],
+    "report": [
+      { "t": "Microscopic observation of the pathology slide reveals sheets and nests of atypical lymphoid cells with " },
+      { "t": "large", "n": "Large Cell" },
+      { "t": ", " },
+      { "t": "hyperchromatic nuclei", "n": "Hyperchromatic nuclei" },
+      { "t": " and " },
+      { "t": "prominent nucleoli", "n": "Prominent nucleoli" },
+      { "t": ". There is a high degree of " },
+      { "t": "nuclear pleomorphism", "n": "Nuclear pleomorphism" },
+      { "t": ", and " },
+      { "t": "mitotic figures are frequently observed", "n": "Increased Mitotic Figures" },
+      { "t": ", indicating a high rate of cell division. Areas of " },
+      { "t": "necrosis", "n": "Necrosis" },
+      { "t": " are present within the tissue. Based on these observations, the diagnosis is diffuse large " },
+      { "t": "B-cell lymphoma", "dx": true },
+      { "t": "." }
+    ]
+  },
+  {
+    "tab": "Melanoma",
+    "site": "Lymph node",
+    "image": "static/images/examples/melanoma.jpg",
+    "alt": "Whole slide image of a lymph node specimen with metastatic melanoma",
+    "center": { "id": "Skin Cutaneous Melanoma", "label": "Melanoma" },
+    "present": [
+      { "id": "Atypical Melanocyte", "label": "Atypical melanocytes" },
+      { "id": "Nuclear pleomorphism", "label": "Nuclear pleomorphism" },
+      { "id": "Prominent nucleoli", "label": "Prominent nucleoli" },
+      { "id": "Cytoplasmic Eosinophilic Globules Present", "label": "Cytoplasmic eosinophilic globules present" },
+      { "id": "High Mitotic Activity", "label": "High mitotic activity" }
+    ],
+    "absent": [
+      { "id": "Vascular invasion by tumor", "label": "Vascular invasion" },
+      { "id": "Necrosis", "label": "Necrosis" }
+    ],
+    "report": [
+      { "t": "Microscopic observation of the pathology slide reveals metastatic melanoma characterized by the presence of " },
+      { "t": "atypical melanocytic cells", "n": "Atypical Melanocyte" },
+      { "t": " infiltrating the lymph node architecture. The tumor cells exhibit " },
+      { "t": "pleomorphic nuclei", "n": "Nuclear pleomorphism" },
+      { "t": " with " },
+      { "t": "prominent nucleoli", "n": "Prominent nucleoli" },
+      { "t": " and " },
+      { "t": "abundant eosinophilic cytoplasm", "n": "Cytoplasmic Eosinophilic Globules Present" },
+      { "t": ". " },
+      { "t": "Mitotic figures are frequently observed", "n": "High Mitotic Activity" },
+      { "t": ", indicating a high rate of cell division. There is " },
+      { "t": "no evidence of ", "neg": true },
+      { "t": "vascular invasion", "n": "Vascular invasion by tumor" },
+      { "t": " or " },
+      { "t": "necrosis", "n": "Necrosis" },
+      { "t": " within the examined tissue. Based on these observations, the diagnosis is metastatic malignant " },
+      { "t": "melanoma", "dx": true },
+      { "t": "." }
+    ]
+  }
+]
