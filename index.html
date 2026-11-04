@@ -38,8 +38,8 @@
 <style>
 :root{
   color-scheme:light;
-  --bg:#fff;--surface:#fff;--ink:#1d1630;--muted:#5d5470;--line:#e6dff0;
-  --eosin:#29010f;--hema:#4b2a8f;--accent:#6b2fa0;--tint:#f3ecfa;--good:#1b8a4b;--bad:#c92a2a;
+  --bg:#fff;--surface:#fff;--ink:#1d1630;--muted:#5d5470;--line:#f1dce8;
+  --eosin:#d81b74;--hema:#ff6fb1;--accent:#d81b74;--accent-soft:#ff6fb1;--tint:#fdecf4;--good:#1b8a4b;--bad:#c92a2a;
   --serif:'Newsreader',Georgia,serif;--sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
 *{box-sizing:border-box}
@@ -53,7 +53,7 @@ nav b{font-family:var(--serif);font-size:20px;margin-right:auto;color:var(--ink)
 nav a{font-size:14px;font-weight:500;color:var(--muted);text-decoration:none}
 nav a:hover{color:var(--eosin)}
 header{text-align:center;padding:72px 0 36px;background:#fff}
-.venue{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--eosin);border:1px solid var(--eosin);border-radius:99px;padding:3px 14px;margin-bottom:22px}
+.venue{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,var(--accent-soft),var(--accent));border-radius:99px;padding:4px 16px;margin-bottom:22px;box-shadow:0 6px 16px -6px rgba(216,27,116,.55)}
 h1{font:600 clamp(30px,5vw,50px)/1.15 var(--serif);margin:0 0 6px;letter-spacing:-.01em}
 h1 .k{color:var(--eosin)}
 .authors{margin:26px 0 6px;font-size:18px}
@@ -68,6 +68,7 @@ h1 .k{color:var(--eosin)}
 section{padding:56px 0}
 h2{font:600 32px/1.2 var(--serif);margin:0 0 22px;text-align:center}
 h2::after{content:"";display:block;width:44px;height:3px;border-radius:3px;margin:12px auto 0;background:linear-gradient(90deg,var(--hema),var(--eosin))}
+::selection{background:var(--accent-soft);color:#fff}
 h3{font:600 21px var(--serif);margin:34px 0 10px}
 p{margin:0 0 16px}
 .lead{text-align:justify;hyphens:auto}
@@ -76,7 +77,7 @@ figure img{max-width:100%;height:auto;border:0;border-radius:0;background:#fff;c
 figcaption{font-size:14.5px;color:var(--muted);margin-top:12px;text-align:left}
 figcaption b{color:var(--ink)}
 .alt-bg{background:var(--surface);border-block:1px solid var(--line)}
-.video{border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 50px -25px rgba(75,42,143,.5);background:#000}
+.video{border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 50px -25px rgba(216,27,116,.5);background:#000}
 .video video{display:block;width:100%}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:28px 0}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
@@ -85,7 +86,7 @@ figcaption b{color:var(--ink)}
 .card p{font-size:15px;color:var(--muted);margin:0}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0}
 .stat{text-align:center;padding:18px 10px;border-radius:14px;background:var(--tint)}
-.stat b{display:block;font:600 30px var(--serif);color:var(--hema)}
+.stat b{display:block;font:600 30px var(--serif);color:var(--accent)}
 .stat span{font-size:13.5px;color:var(--muted)}
 .tw{overflow-x:auto;margin:16px 0 8px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
 table{border-collapse:collapse;width:100%;font-size:14.5px;font-variant-numeric:tabular-nums}
@@ -112,6 +113,79 @@ footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;b
 #lb{position:fixed;inset:0;z-index:50;background:rgba(10,6,18,.92);display:none;place-items:center;padding:24px;cursor:zoom-out}
 #lb.on{display:grid}
 #lb img{max-width:100%;max-height:100%;border-radius:8px;background:#fff}
+/* ===== Teaser figure ===== */
+.tz{--green:#12a66a;--green-ink:#0c8a55;--red:#e5484d;--red-ink:#d6363b;--blue:#3b5bdb;--halo:#fff3d9;
+  width:100%;color:var(--ink);font:14px/1.4 var(--sans)}
+.tz *{box-sizing:border-box}
+.tz-grid{display:grid;grid-template-columns:minmax(0,1fr) 42px 276px;align-items:stretch}
+
+/* left: one seamless panel, WSI | graph, with the arrow straddling the seam */
+.tz-box{position:relative;display:flex;border-radius:18px;overflow:hidden;min-height:400px}
+.tz-wsi{flex:none;width:240px;background:linear-gradient(160deg,#f4f1ff,#e2ddfa);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px}
+.tz-wsi img{display:block;width:150px;max-width:100%;height:auto;cursor:default;filter:drop-shadow(0 6px 10px rgba(80,60,160,.22))}
+.tz-wsi p{margin:0;font-size:14px;color:#4a4670}
+.tz-wsi b{color:var(--ink)}
+.tz-kg{flex:1;min-width:0;display:flex;flex-direction:column;background:linear-gradient(160deg,#fffaf0,#ffefd0);padding:12px 12px 12px 34px}
+.tz-leg{display:flex;justify-content:flex-end}
+.tz-leg div{display:inline-flex;gap:12px;background:rgba(255,255,255,.75);border-radius:8px;padding:3px 10px;font-size:11.5px;font-weight:700}
+.tz-leg .g{color:var(--green-ink)}.tz-leg .r{color:var(--red-ink)}
+.tz-leg i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
+.tz-kg svg{flex:1 1 0;min-height:0;width:100%;display:block}
+.tz-kg text{font:700 14.5px var(--sans)}
+.tz-kg .lg{fill:var(--green-ink)}.tz-kg .lr{fill:var(--red-ink)}
+.tz-kg .ct{fill:var(--blue);paint-order:stroke;stroke:var(--halo);stroke-width:5px;stroke-linejoin:round}
+.tz-kg .e{fill:none;stroke-width:2.4;stroke-linecap:round}
+.tz-kg .e.p{stroke:var(--green)}.tz-kg .e.a{stroke:var(--red);stroke-dasharray:7 6}
+.tz-kg .e{transition:stroke-width .25s}
+.tz-kg .e.hot{stroke-width:5}
+.tz-kg .nd .dot,.tz-kg .nd .ring{transform-box:fill-box;transform-origin:center}
+.tz-kg .nd .dot{transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.tz-kg .nd .ring{fill:none;stroke:currentColor;stroke-width:2.5;opacity:0}
+.tz-kg .nd.pos{color:var(--green)}.tz-kg .nd.neg{color:var(--red)}
+.tz-kg .nd.hot .dot{transform:scale(1.6)}
+.tz-kg .nd.hot .ring{animation:tz-ping 1s ease-out infinite}
+@keyframes tz-ping{0%{opacity:.85;transform:scale(1)}100%{opacity:0;transform:scale(3.6)}}
+.tz-ex{position:absolute;left:206px;top:50%;width:160px;transform:translateY(-50%);filter:drop-shadow(0 6px 12px rgba(109,40,217,.32))}
+.tz-ex svg{display:block;width:100%;height:auto}
+.tz-ex .v{display:none}
+
+/* arrow towards the chat */
+.tz-go{display:flex;align-items:center;justify-content:flex-start}
+.tz-go svg{display:block;width:34px;height:auto}
+.tz-go .v{display:none}
+
+/* chat */
+.tz-chat{display:flex;flex-direction:column;justify-content:center;gap:10px;min-width:0}
+.tz-msg{display:flex;flex-direction:column;gap:4px;min-width:0}
+.tz-msg>small{font:700 11px var(--sans);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.tz-msg.user{align-self:flex-end;max-width:94%;align-items:flex-end}
+.tz-msg.bot{align-self:stretch}
+.tz-bub{border-radius:16px;padding:9px 12px;font-size:13.5px}
+.tz-msg.user .tz-bub{background:#fde6f0;border:1.5px solid #f7b8d2;border-bottom-right-radius:5px}
+.tz-msg.bot .tz-bub{background:#f4f4f6;border:1.5px solid #e1e1e6;border-top-left-radius:5px;line-height:1.55}
+.tz-rep{display:grid}
+.tz-rep>*{grid-area:1/1;margin:0}
+.tz .hg,.tz .hr{font-weight:600;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.tz .hg{color:var(--green-ink);text-decoration-color:var(--green)}
+.tz .hr{color:var(--red-ink);text-decoration-color:var(--red)}
+.tz-cur{display:inline-block;width:2px;height:1.1em;background:var(--accent);vertical-align:-.18em;margin-left:2px;animation:tz-blink 1s steps(1) infinite}
+@keyframes tz-blink{50%{opacity:0}}
+.tz.anim .tz-full{opacity:0}
+
+@media (max-width:899px){
+  .tz-grid{grid-template-columns:1fr}
+  .tz-box{flex-direction:column;min-height:0}
+  .tz-wsi{width:auto;height:260px;padding:16px 16px 46px}
+  .tz-wsi img{flex:1 1 0;min-height:0;width:auto;max-width:100%}
+  .tz-kg{padding:34px 12px 12px}
+  .tz-kg svg{flex:none;height:auto;max-width:380px;margin:0 auto}
+  .tz-ex{left:50%;top:224px;width:150px;transform:translateX(-50%)}
+  .tz-ex .h,.tz-go .h{display:none}
+  .tz-ex .v,.tz-go .v{display:block}
+  .tz-go{justify-content:center}
+  .tz-chat{margin-top:8px}
+  .tz-go svg{width:auto;height:30px}
+}
 </style>
 </head>
 <body>
@@ -128,20 +202,43 @@ footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;b
     <a class="btn" href="static/pdfs/pathkgen.pdf" target="_blank" rel="noopener">📄 Paper</a>
     <a class="btn" href="https://arxiv.org/abs/2610.33691" target="_blank" rel="noopener">arXiv</a>
     <a class="btn" href="https://github.com/nadunnr/PathKGen" target="_blank" rel="noopener">&lt;/&gt; Code</a>
-    <a class="btn alt" href="#demo">▶ Demo Video</a>
+    <a class="btn alt" href="#demo" style="display:none">▶ Demo Video</a>
   </div>
 </div></header>
 
 <section style="padding-top: 10px;">
   <div class="wrap">
-    <figure style="width: 50%; max-width: 800px; margin: 0 auto;">
-      <img
-        src="static/images/teaser.jpg"
-        alt="PathKGen teaser: a whole slide image, the extracted knowledge subgraph, and the generated report"
-        loading="eager"
-        style="display: block; width: 100%; height: auto;"
-      >
-    </figure>
+    <div class="tz" id="tz" role="group" aria-label="PathKGen teaser: a whole slide image taken from the lung is converted into a knowledge graph with present and absent features; given the user question, PathKGen outputs a diagnostic report.">
+      <div class="tz-grid">
+        <div class="tz-box">
+          <div class="tz-wsi">
+            <img src="static/images/wsi_lung.png" alt="Whole slide image of lung tissue">
+            <p><em>Taken from:</em> <b>Lung</b></p>
+          </div>
+          <div class="tz-kg">
+            <div class="tz-leg" aria-hidden="true"><div><span class="g"><i style="background:var(--green)"></i>Present</span><span class="r"><i style="background:var(--red)"></i>Not present</span></div></div>
+            <svg viewBox="0 0 380 400" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Extracted knowledge graph for Lung Squamous Cell Carcinoma. Present: prominent nucleoli, intercellular bridges, keratinization, nuclear pleomorphism, atypical squamous cells. Not present: vascular invasion, necrosis."><path class="e p" data-k="nuc" d="M190,205 L72,92"/><path class="e p" data-k="bridge" d="M190,205 L205,56"/><path class="e p" data-k="kera" d="M190,205 L318,120"/><path class="e p" data-k="pleo" d="M190,205 L62,285"/><path class="e p" data-k="atyp" d="M190,205 L170,348"/><path class="e a" data-k="vasc" d="M190,205 L330,225"/><path class="e a" data-k="necro" d="M190,205 L285,330"/><circle cx="190" cy="205" r="10" fill="var(--blue)"/><g class="nd pos" data-k="nuc"><circle class="ring" cx="72" cy="92" r="8.5"/><circle class="dot" cx="72" cy="92" r="8.5" fill="var(--green)"/><text class="lg" text-anchor="middle"><tspan x="72" y="54">Prominent</tspan><tspan x="72" y="70">nucleoli</tspan></text></g><g class="nd pos" data-k="bridge"><circle class="ring" cx="205" cy="56" r="8.5"/><circle class="dot" cx="205" cy="56" r="8.5" fill="var(--green)"/><text class="lg" text-anchor="middle"><tspan x="205" y="18">Intercellular</tspan><tspan x="205" y="34">bridges</tspan></text></g><g class="nd pos" data-k="kera"><circle class="ring" cx="318" cy="120" r="8.5"/><circle class="dot" cx="318" cy="120" r="8.5" fill="var(--green)"/><text class="lg" text-anchor="middle"><tspan x="318" y="100">Keratinization</tspan></text></g><g class="nd pos" data-k="pleo"><circle class="ring" cx="62" cy="285" r="8.5"/><circle class="dot" cx="62" cy="285" r="8.5" fill="var(--green)"/><text class="lg" text-anchor="middle"><tspan x="65" y="307">Nuclear</tspan><tspan x="65" y="323">pleomorphism</tspan></text></g><g class="nd pos" data-k="atyp"><circle class="ring" cx="170" cy="348" r="8.5"/><circle class="dot" cx="170" cy="348" r="8.5" fill="var(--green)"/><text class="lg" text-anchor="middle"><tspan x="170" y="370">Atypical</tspan><tspan x="170" y="386">squamous cells</tspan></text></g><g class="nd neg" data-k="vasc"><circle class="ring" cx="330" cy="225" r="8.5"/><circle class="dot" cx="330" cy="225" r="8.5" fill="var(--red)"/><text class="lr" text-anchor="middle"><tspan x="330" y="247">Vascular</tspan><tspan x="330" y="263">invasion</tspan></text></g><g class="nd neg" data-k="necro"><circle class="ring" cx="285" cy="330" r="8.5"/><circle class="dot" cx="285" cy="330" r="8.5" fill="var(--red)"/><text class="lr" text-anchor="middle"><tspan x="285" y="352">Necrosis</tspan></text></g><text class="ct" text-anchor="middle"><tspan x="196" y="231">Lung Squamous</tspan><tspan x="196" y="247">Cell Carcinoma</tspan></text></svg>
+          </div>
+          <div class="tz-ex" aria-hidden="true">
+            <svg class="h" viewBox="0 0 170 90"><defs><linearGradient id="tzg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#6d28d9"/></linearGradient></defs><polygon points="0,20 112,20 112,0 170,45 112,90 112,70 0,70" fill="url(#tzg1)"/><text text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="20" fill="#fff"><tspan x="52" y="42">Graph</tspan><tspan x="52" y="64">extract</tspan></text></svg>
+            <svg class="v" viewBox="0 0 150 80"><defs><linearGradient id="tzg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#6d28d9"/></linearGradient></defs><polygon points="22,0 128,0 128,40 150,40 75,80 0,40 22,40" fill="url(#tzg2)"/><text x="75" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="15" fill="#fff">Graph extract</text></svg>
+          </div>
+        </div>
+        <div class="tz-go" aria-hidden="true">
+          <svg class="h" viewBox="0 0 34 56"><polygon points="0,16 16,16 16,0 34,28 16,56 16,40 0,40" fill="#d3d3da"/></svg>
+          <svg class="v" viewBox="0 0 56 34"><polygon points="16,0 40,0 40,16 56,16 28,34 0,16 16,16" fill="#d3d3da"/></svg>
+        </div>
+        <div class="tz-chat">
+          <div class="tz-msg user"><small>User</small><div class="tz-bub">What is the diagnosis of this whole slide image?</div></div>
+          <div class="tz-msg bot"><small>PathKGen output</small>
+            <div class="tz-bub"><div class="tz-rep">
+              <p class="tz-full">Microscopic observation of the pathology slide reveals a moderately differentiated squamous cell carcinoma characterized by sheets of <span class="hg" data-k="atyp">atypical squamous cells</span> with <span class="hg" data-k="bridge">intercellular bridges</span> and <span class="hg" data-k="kera">keratinization</span>. The tumor cells exhibit moderate <span class="hg" data-k="pleo">nuclear pleomorphism</span> with <span class="hg" data-k="nuc">prominent nucleoli</span>. Mitotic figures are present, indicating a moderate rate of cell division. There is <span class="hr" data-k="vasc necro">no evidence of vascular invasion or necrosis</span> within the examined tissue. Based on these observations, the diagnosis is squamous cell carcinoma.</p>
+              <p class="tz-typed" aria-hidden="true"></p>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -299,6 +396,54 @@ footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;b
     (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='Copied!'}).catch(function(){b.textContent='Press Ctrl+C'});
     setTimeout(function(){b.textContent='Copy'},1800);
   };
+})();
+</script>
+<script>
+(function(){
+  var el=document.getElementById('tz');if(!el)return;
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var full=el.querySelector('.tz-full'),typed=el.querySelector('.tz-typed');
+  el.classList.add('anim');
+  var segs=[];
+  Array.prototype.forEach.call(full.childNodes,function(n){
+    if(n.nodeType===3)segs.push({t:n.textContent});
+    else if(n.nodeType===1)segs.push({t:n.textContent,c:n.className,k:(n.getAttribute('data-k')||'').split(' ').filter(Boolean)});
+  });
+  var seen=true,waiters=[];
+  if('IntersectionObserver' in window){
+    seen=false;
+    new IntersectionObserver(function(e){
+      seen=e[0].isIntersecting;
+      if(seen){var w=waiters;waiters=[];w.forEach(function(f){f()})}
+    },{threshold:.2}).observe(el);
+  }
+  function sleep(ms){return new Promise(function(r){setTimeout(function(){seen?r():waiters.push(r)},ms)})}
+  function hot(ks,on){ks.forEach(function(k){Array.prototype.forEach.call(el.querySelectorAll('[data-k="'+k+'"]'),function(n){n.classList.toggle('hot',on)})})}
+  var cur=document.createElement('span');cur.className='tz-cur';
+  async function typeAll(){
+    typed.textContent='';typed.appendChild(cur);
+    for(var s=0;s<segs.length;s++){
+      var seg=segs[s],span=document.createElement('span');
+      if(seg.c)span.className=seg.c;
+      typed.insertBefore(span,cur);
+      hot(seg.k||[],true);
+      for(var i=0;i<seg.t.length;){
+        var step=2+(Math.random()<.3?1:0);
+        span.textContent+=seg.t.slice(i,i+step);i+=step;
+        var ch=seg.t.charAt(i-1);
+        await sleep(ch==='.'?280:ch===','?120:22+Math.random()*14);
+      }
+      hot(seg.k||[],false);
+    }
+  }
+  (async function(){
+    for(;;){
+      typed.textContent='';
+      await sleep(1000);
+      await typeAll();
+      await sleep(8000);
+    }
+  })();
 })();
 </script>
 </body>
