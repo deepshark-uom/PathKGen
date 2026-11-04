@@ -1,0 +1,318 @@
+reference_entity,related_entity,relation_name
+Lung Adenocarcinoma,Lung,found_in
+Lung Adenocarcinoma,Acinar Pattern,has_growth_pattern
+Lung Adenocarcinoma,Lepidic Growth Pattern,has_growth_pattern
+Lung Adenocarcinoma,Glandular Differentiation,has_growth_pattern
+Lung Adenocarcinoma,High Mitotic Activity,has_cytological_feature
+Lung Adenocarcinoma,Nuclear pleomorphism,has_nuclear_feature
+Lung Adenocarcinoma,Lymphatic Invasion,has_invasion_pattern
+Lung Adenocarcinoma,Necrosis,has_background_feature
+Adrenocortical Carcinoma,Adrenal Glands,found_in
+Adrenocortical Carcinoma,Diffuse Architectural Pattern,has_growth_pattern
+Adrenocortical Carcinoma,Trabecular Pattern,has_growth_pattern
+Adrenocortical Carcinoma,Sheet-Like Growth Pattern,has_growth_pattern
+Adrenocortical Carcinoma,Nuclear pleomorphism,has_nuclear_feature
+Adrenocortical Carcinoma,Prominent nucleoli,has_nuclear_feature
+Adrenocortical Carcinoma,Atypical Mitotic Figures,has_cytological_feature
+Adrenocortical Carcinoma,High Mitotic Activity,has_cytological_feature
+Adrenocortical Carcinoma,Necrosis,has_background_feature
+Adrenocortical Carcinoma,Capsular Invasion,has_invasion_pattern
+Adrenocortical Carcinoma,Sinusoidal Infiltration,has_invasion_pattern
+Bladder Urothelial Carcinoma,Urinary Bladder,found_in
+Bladder Urothelial Carcinoma,Papillary Growth Pattern,has_growth_pattern
+Bladder Urothelial Carcinoma,Infiltrative Growth Pattern,has_growth_pattern
+Bladder Urothelial Carcinoma,Carcinoma in Situ,has_growth_pattern
+Bladder Urothelial Carcinoma,Nuclear pleomorphism,has_nuclear_feature
+Bladder Urothelial Carcinoma,Prominent nucleoli,has_nuclear_feature
+Bladder Urothelial Carcinoma,High Mitotic Activity,has_cytological_feature
+Bladder Urothelial Carcinoma,Necrosis,has_background_feature
+Bladder Urothelial Carcinoma,Muscle Invasion,has_invasion_pattern
+Bladder Urothelial Carcinoma,Lymph-vascular invasion,has_invasion_pattern
+Brain Lower Grade Glioma,Brain,found_in
+Brain Lower Grade Glioma,Infiltrative Growth Pattern,has_growth_pattern
+Brain Lower Grade Glioma,Nuclear pleomorphism,has_nuclear_feature
+Brain Lower Grade Glioma,Perinuclear halos,has_cytological_feature
+Brain Lower Grade Glioma,Round retained nuclei,has_nuclear_feature
+Brain Lower Grade Glioma,Irregular nuclei,has_nuclear_feature
+Brain Lower Grade Glioma,Hypercellularity,has_background_feature
+Brain Lower Grade Glioma,Diffusely infiltrative,has_growth_pattern
+Breast Invasive Carcinoma,Breast,found_in
+Breast Invasive Carcinoma,Glandular,has_growth_pattern
+Breast Invasive Carcinoma,Cribriform tumor pattern,has_growth_pattern
+Breast Invasive Carcinoma,Tubule Formation,has_growth_pattern
+Breast Invasive Carcinoma,Nuclear pleomorphism,has_nuclear_feature
+Breast Invasive Carcinoma,High Mitotic Activity,has_cytological_feature
+Breast Invasive Carcinoma,Comedo-Like Necrosis,has_background_feature
+Breast Invasive Carcinoma,Infiltration,has_invasion_pattern
+Breast Invasive Carcinoma,Calcification,has_background_feature
+Cervical Squamous Cell Carcinoma,Cervix Uteri,found_in
+Cervical Squamous Cell Carcinoma,Keratinization,has_cytological_feature
+Cervical Squamous Cell Carcinoma,intercellular bridge,has_cytological_feature
+Cervical Squamous Cell Carcinoma,High Mitotic Activity,has_cytological_feature
+Cervical Squamous Cell Carcinoma,Nuclear pleomorphism,has_nuclear_feature
+Cervical Squamous Cell Carcinoma,Stromal Invasion,has_invasion_pattern
+Cervical Squamous Cell Carcinoma,Infiltrative Growth Pattern,has_growth_pattern
+Cervical Squamous Cell Carcinoma,Prominent nucleoli,has_nuclear_feature
+Cervical Squamous Cell Carcinoma,Lymph-vascular invasion,has_invasion_pattern
+Cervical Squamous Cell Carcinoma,Necrosis,has_background_feature
+Cholangiocarcinoma,Bile duct structure,found_in
+Cholangiocarcinoma,Glandular,has_growth_pattern
+Cholangiocarcinoma,Non-Specific Glandular Pattern,has_growth_pattern
+Cholangiocarcinoma,Infiltrative Growth Pattern,has_growth_pattern
+Cholangiocarcinoma,mucinous,has_cytological_feature
+Cholangiocarcinoma,Nuclear pleomorphism,has_nuclear_feature
+Cholangiocarcinoma,Nuclear Atypia Present,has_nuclear_feature
+Cholangiocarcinoma,desmoplastic,has_background_feature
+Cholangiocarcinoma,Lymph-vascular invasion,has_invasion_pattern
+Cholangiocarcinoma,Necrosis,has_background_feature
+Cholangiocarcinoma,Perineural Invasion,has_invasion_pattern
+Colon Adenocarcinoma,Colon,found_in
+Colon Adenocarcinoma,Glandular Differentiation,has_growth_pattern
+Colon Adenocarcinoma,Nuclear pleomorphism,has_nuclear_feature
+Colon Adenocarcinoma,Necrosis,has_background_feature
+Colon Adenocarcinoma,Infiltrative Growth Pattern,has_growth_pattern
+Colon Adenocarcinoma,High Mitotic Activity,has_cytological_feature
+Colon Adenocarcinoma,Ulceration,has_background_feature
+Colon Adenocarcinoma,Tumor invades muscularis mucosae,has_invasion_pattern
+Colon Adenocarcinoma,Lymph-vascular invasion,has_invasion_pattern
+Endocervical Adenocarcinoma,Endocervix,found_in
+Endocervical Adenocarcinoma,Glandular Pattern,has_growth_pattern
+Endocervical Adenocarcinoma,Cribriform tumor pattern,has_growth_pattern
+Endocervical Adenocarcinoma,Tubuloglandular Pattern,has_growth_pattern
+Endocervical Adenocarcinoma,mucinous,has_cytological_feature
+Endocervical Adenocarcinoma,High Mitotic Activity,has_cytological_feature
+Endocervical Adenocarcinoma,Nuclear pleomorphism,has_nuclear_feature
+Endocervical Adenocarcinoma,Hyperchromasia,has_nuclear_feature
+Endocervical Adenocarcinoma,Stromal Invasion,has_invasion_pattern
+Endocervical Adenocarcinoma,Lymph-vascular invasion,has_invasion_pattern
+Endocervical Adenocarcinoma,Necrosis,has_background_feature
+Esophageal Carcinoma,Esophagus,found_in
+Esophageal Carcinoma,Keratinization,has_cytological_feature
+Esophageal Carcinoma,intercellular bridge,has_cytological_feature
+Esophageal Carcinoma,Infiltrative Growth Pattern,has_growth_pattern
+Esophageal Carcinoma,High Mitotic Activity,has_cytological_feature
+Esophageal Carcinoma,Nuclear pleomorphism,has_nuclear_feature
+Esophageal Carcinoma,Ulceration,has_background_feature
+Esophageal Carcinoma,Tumor invades muscularis mucosae,has_invasion_pattern
+Esophageal Carcinoma,Perineural Invasion,has_invasion_pattern
+Esophageal Carcinoma,Necrosis,has_background_feature
+Head and Neck Squamous Cell Carcinoma,Head and neck structure,found_in
+Head and Neck Squamous Cell Carcinoma,Keratin pearl formation,has_background_feature
+Head and Neck Squamous Cell Carcinoma,Keratinization,has_cytological_feature
+Head and Neck Squamous Cell Carcinoma,intercellular bridge,has_cytological_feature
+Head and Neck Squamous Cell Carcinoma,Perineural Invasion,has_invasion_pattern
+Head and Neck Squamous Cell Carcinoma,High Mitotic Activity,has_cytological_feature
+Head and Neck Squamous Cell Carcinoma,Nuclear pleomorphism,has_nuclear_feature
+Head and Neck Squamous Cell Carcinoma,Lymph-vascular invasion,has_invasion_pattern
+Head and Neck Squamous Cell Carcinoma,Infiltrative Growth Pattern,has_growth_pattern
+Head and Neck Squamous Cell Carcinoma,Prominent nucleoli,has_nuclear_feature
+Head and Neck Squamous Cell Carcinoma,Necrosis,has_background_feature
+Kidney Chromophobe,Kidney,found_in
+Kidney Chromophobe,Perinuclear halos,has_cytological_feature
+Kidney Chromophobe,Abundant cytoplasm,has_cytological_feature
+Kidney Chromophobe,Neoplastic Polygonal Cell,has_cytological_feature
+Kidney Chromophobe,Hemorrhages,has_background_feature
+Kidney Chromophobe,Wrinkled nucleus,has_nuclear_feature
+Kidney Chromophobe,Plasma membrane discontinuities,has_cytological_feature
+Kidney Chromophobe,Tumor Vascular Invasion,has_invasion_pattern
+Kidney Chromophobe,Cytoplasmic Eosinophilic Globules Present,has_cytological_feature
+Prostate Adenocarcinoma,Prominent nucleoli,has_nuclear_feature
+Prostate Adenocarcinoma,Nuclear pleomorphism,has_nuclear_feature
+Prostate Adenocarcinoma,cribriform,has_growth_pattern
+Prostate Adenocarcinoma,Architectural Distortion,has_growth_pattern
+Prostate Adenocarcinoma,Perineural Invasion,has_invasion_pattern
+Prostate Adenocarcinoma,Extraprostatic extension,has_invasion_pattern
+Prostate Adenocarcinoma,Seminal vesicle invasion,has_invasion_pattern
+Prostate Adenocarcinoma,Lymph-vascular invasion,has_invasion_pattern
+Prostate Adenocarcinoma,High Grade Prostatic Intraepithelial Neoplasia,has_background_feature
+Prostate Adenocarcinoma,glandular; atrophy,has_background_feature
+Prostate Adenocarcinoma,Prostate,found_in
+Rectum Adenocarcinoma,Rectum,found_in
+Rectum Adenocarcinoma,Glandular,has_growth_pattern
+Rectum Adenocarcinoma,Infiltrative Growth Pattern,has_growth_pattern
+Rectum Adenocarcinoma,mucinous,has_growth_pattern
+Rectum Adenocarcinoma,Nuclear pleomorphism,has_nuclear_feature
+Rectum Adenocarcinoma,Nuclear Atypia Present,has_nuclear_feature
+Rectum Adenocarcinoma,Necrosis,has_background_feature
+Rectum Adenocarcinoma,Ulceration,has_background_feature
+Rectum Adenocarcinoma,Perineural Invasion,has_invasion_pattern
+Rectum Adenocarcinoma,Lymph-vascular invasion,has_invasion_pattern
+Sarcoma,spindle cell,has_cytological_feature
+Sarcoma,Pleomorphic Cell,has_cytological_feature
+Sarcoma,High Mitotic Activity,has_cytological_feature
+Sarcoma,Storiform Growth Pattern,has_growth_pattern
+Sarcoma,Structure of fasciculus interfascicularis,has_growth_pattern
+Sarcoma,Infiltrative Growth Pattern,has_growth_pattern
+Sarcoma,Vascular invasion by tumor present,has_invasion_pattern
+Sarcoma,Nuclear pleomorphism,has_nuclear_feature
+Sarcoma,Hyperchromatic nuclei,has_nuclear_feature
+Sarcoma,Necrosis,has_background_feature
+Sarcoma,Myxoid degeneration of stroma,has_background_feature
+Skin Cutaneous Melanoma,Atypical Melanocyte,has_cytological_feature
+Skin Cutaneous Melanoma,spindle cell,has_cytological_feature
+Skin Cutaneous Melanoma,High Mitotic Activity,has_cytological_feature
+Skin Cutaneous Melanoma,Abundant cytoplasm,has_cytological_feature
+Skin Cutaneous Melanoma,Prominent nucleoli,has_nuclear_feature
+Skin Cutaneous Melanoma,Epithelioid Cell Melanoma,has_cytological_feature
+Skin Cutaneous Melanoma,Ulceration,has_background_feature
+Skin Cutaneous Melanoma,Nuclear pleomorphism,has_nuclear_feature
+Skin Cutaneous Melanoma,Sheet-Like Growth Pattern,has_growth_pattern
+Skin Cutaneous Melanoma,Nuclear color increased,has_nuclear_feature
+Stomach Adenocarcinoma,Stomach,found_in
+Stomach Adenocarcinoma,signet ring cell,has_cytological_feature
+Stomach Adenocarcinoma,Diffusely infiltrative,has_growth_pattern
+Stomach Adenocarcinoma,Infiltrative Growth Pattern,has_growth_pattern
+Stomach Adenocarcinoma,Nuclear pleomorphism,has_nuclear_feature
+Stomach Adenocarcinoma,High Mitotic Activity,has_cytological_feature
+Stomach Adenocarcinoma,Necrosis,has_background_feature
+Stomach Adenocarcinoma,Lymph-vascular invasion,has_invasion_pattern
+Stomach Adenocarcinoma,Tumor invades muscularis mucosae,has_invasion_pattern
+Stomach Adenocarcinoma,Ulceration,has_background_feature
+Thymoma,Thymus Gland,found_in
+Thymoma,Capsular Invasion,has_invasion_pattern
+Thymoma,Lobulated Nodule,has_growth_pattern
+Thymoma,spindle cell,has_cytological_feature
+Thymoma,Epithelial Cells,has_cytological_feature
+Thymoma,Necrosis,has_background_feature
+Thymoma,Prominent nucleoli,has_nuclear_feature
+Thymoma,Fibrous Septa Present,has_growth_pattern
+Thymoma,Small lymphocyte,has_background_feature
+Thymoma,Neoplastic Polygonal Cell,has_cytological_feature
+Thyroid Carcinoma,Thyroid Gland,found_in
+Thyroid Carcinoma,Papillary Growth Pattern,has_growth_pattern
+Thyroid Carcinoma,Capsular Invasion,has_invasion_pattern
+Thyroid Carcinoma,Lymph-vascular invasion,has_invasion_pattern
+Thyroid Carcinoma,Nuclear Clearing,has_nuclear_feature
+Thyroid Carcinoma,Calcification,has_background_feature
+Thyroid Carcinoma,Nuclear Pseudoinclusion,has_nuclear_feature
+Thyroid Carcinoma,Follicular,has_growth_pattern
+Thyroid Carcinoma,Nuclear Grooves,has_nuclear_feature
+Thyroid Carcinoma,Nuclear Clearing,has_nuclear_feature
+Thyroid Carcinoma,Ground Glass Nuclear Inclusion,has_nuclear_feature
+Uterine Carcinosarcoma,Uterus,found_in
+Uterine Carcinosarcoma,Biphasic Pattern,has_growth_pattern
+Uterine Carcinosarcoma,Papillary Growth Pattern,has_growth_pattern
+Uterine Carcinosarcoma,Glandular Differentiation,has_growth_pattern
+Uterine Carcinosarcoma,High Mitotic Activity,has_cytological_feature
+Uterine Carcinosarcoma,spindle cell,has_cytological_feature
+Uterine Carcinosarcoma,Lymph-vascular invasion,has_invasion_pattern
+Uterine Carcinosarcoma,Necrosis,has_background_feature
+Uterine Carcinosarcoma,Calcification,has_background_feature
+Uterine Carcinosarcoma,Myometrial Invasion,has_invasion_pattern
+Uterine Carcinosarcoma,Marked Nuclear Atypia Present,has_nuclear_feature
+Uterine Corpus Endometrial Carcinoma,Glandular,has_growth_pattern
+Uterine Corpus Endometrial Carcinoma,Papillary Growth Pattern,has_growth_pattern
+Uterine Corpus Endometrial Carcinoma,Squamous Differentiation,has_growth_pattern
+Uterine Corpus Endometrial Carcinoma,Stromal Invasion,has_invasion_pattern
+Uterine Corpus Endometrial Carcinoma,Lymph-vascular invasion,has_invasion_pattern
+Uterine Corpus Endometrial Carcinoma,Nuclear pleomorphism,has_nuclear_feature
+Uterine Corpus Endometrial Carcinoma,Nuclear Atypia Present,has_nuclear_feature
+Uterine Corpus Endometrial Carcinoma,High Mitotic Activity,has_cytological_feature
+Uterine Corpus Endometrial Carcinoma,Necrosis,has_background_feature
+Uterine Corpus Endometrial Carcinoma,Myometrial Invasion,has_invasion_pattern
+Uterine Corpus Endometrial Carcinoma,Endometrium,found_in
+Uterine Corpus Endometrial Carcinoma,Adenomyosis,found_in
+Uveal Melanoma,Uvea,found_in
+Uveal Melanoma,spindle cell,has_cytological_feature
+Uveal Melanoma,Fusiform cell,has_cytological_feature
+Uveal Melanoma,Prominent nucleoli,has_nuclear_feature
+Uveal Melanoma,Nuclear Atypia Present,has_nuclear_feature
+Uveal Melanoma,Disruption in Bruchs membrane,has_invasion_pattern
+Uveal Melanoma,Melanin pigmentation,has_cytological_feature
+Uveal Melanoma,Atrophic retina,has_background_feature
+Uveal Melanoma,High Mitotic Activity,has_cytological_feature
+Uveal Melanoma,Epithelioid Cell Melanoma,has_cytological_feature
+Uveal Melanoma,Prominent vasculature,has_growth_pattern
+Uveal Melanoma,Mixed Cellular Population,has_growth_pattern
+Kidney Renal Clear Cell Carcinoma,Kidney,found_in
+Kidney Renal Clear Cell Carcinoma,Abundant cytoplasm,has_cytological_feature
+Kidney Renal Clear Cell Carcinoma,Neoplastic Clear Cell,has_cytological_feature
+Kidney Renal Clear Cell Carcinoma,Acinar Pattern,has_growth_pattern
+Kidney Renal Clear Cell Carcinoma,Solid Pattern,has_growth_pattern
+Kidney Renal Clear Cell Carcinoma,Vascular invasion by tumor,has_invasion_pattern
+Kidney Renal Clear Cell Carcinoma,Renal tumor invasion into perinephric tissues,has_invasion_pattern
+Kidney Renal Clear Cell Carcinoma,Irregular nuclei,has_nuclear_feature
+Kidney Renal Clear Cell Carcinoma,Marked Nuclear Atypia Present,has_nuclear_feature
+Kidney Renal Clear Cell Carcinoma,Nuclear pleomorphism,has_nuclear_feature
+Kidney Renal Papillary Cell Carcinoma,Kidney,found_in
+Kidney Renal Papillary Cell Carcinoma,Papillary pattern,has_growth_pattern
+Kidney Renal Papillary Cell Carcinoma,Structure tubular,has_growth_pattern
+Kidney Renal Papillary Cell Carcinoma,Solid Pattern,has_growth_pattern
+Kidney Renal Papillary Cell Carcinoma,Cuboidal cell,has_cytological_feature
+Kidney Renal Papillary Cell Carcinoma,Abundant cytoplasm,has_cytological_feature
+Kidney Renal Papillary Cell Carcinoma,Prominent nucleoli,has_nuclear_feature
+Kidney Renal Papillary Cell Carcinoma,Cytoplasmic Eosinophilic Globules Present,has_cytological_feature
+Kidney Renal Papillary Cell Carcinoma,Prominent nucleoli,has_nuclear_feature
+Kidney Renal Papillary Cell Carcinoma,Foam Cells,has_background_feature
+Kidney Renal Papillary Cell Carcinoma,Vascular invasion by tumor,has_invasion_pattern
+Kidney Renal Papillary Cell Carcinoma,Renal tumor invasion into perinephric tissues,has_invasion_pattern
+Kidney Renal Papillary Cell Carcinoma,Central fibrous body,has_background_feature
+Liver Hepatocellular Carcinoma,Liver,found_in
+Liver Hepatocellular Carcinoma,Trabecular Pattern,has_growth_pattern
+Liver Hepatocellular Carcinoma,Pseudoglandular Pattern,has_growth_pattern
+Liver Hepatocellular Carcinoma,Abundant cytoplasm,has_cytological_feature
+Liver Hepatocellular Carcinoma,Fatty transformation,has_cytological_feature
+Liver Hepatocellular Carcinoma,Prominent nucleoli,has_nuclear_feature
+Liver Hepatocellular Carcinoma,Nuclear pleomorphism,has_nuclear_feature
+Liver Hepatocellular Carcinoma,Cirrhosis,has_background_feature
+Liver Hepatocellular Carcinoma,Vascular invasion by tumor,has_invasion_pattern
+Liver Hepatocellular Carcinoma,Capsular Invasion,has_invasion_pattern
+Liver Hepatocellular Carcinoma,Septal formation,has_background_feature
+Liver Hepatocellular Carcinoma,Solid Pattern,has_growth_pattern
+Lung Squamous Cell Carcinoma,Bronchus and lung,found_in
+Lung Squamous Cell Carcinoma,Keratinization,has_cytological_feature
+Lung Squamous Cell Carcinoma,Intercellular bridges,has_cytological_feature
+Lung Squamous Cell Carcinoma,Keratin pearl,has_growth_pattern
+Lung Squamous Cell Carcinoma,Atypical Squamous Cells,has_cytological_feature
+Lung Squamous Cell Carcinoma,Prominent nucleoli,has_nuclear_feature
+Lung Squamous Cell Carcinoma,Nuclear pleomorphism,has_nuclear_feature
+Lung Squamous Cell Carcinoma,Pleural/Elastic Layer Invasion,has_invasion_pattern
+Lung Squamous Cell Carcinoma,High Mitotic Activity,has_cytological_feature
+Lymphoid Neoplasm Diffuse Large B-cell Lymphoma,Diffuse Architectural Pattern,has_growth_pattern
+Lymphoid Neoplasm Diffuse Large B-cell Lymphoma,Diffuse Cellular Infiltrate,has_growth_pattern
+Lymphoid Neoplasm Diffuse Large B-cell Lymphoma,Large lymphocyte,has_cytological_feature
+Lymphoid Neoplasm Diffuse Large B-cell Lymphoma,Abundant cytoplasm,has_cytological_feature
+Lymphoid Neoplasm Diffuse Large B-cell Lymphoma,Irregular nuclei,has_nuclear_feature
+Lymphoid Neoplasm Diffuse Large B-cell Lymphoma,Hyperchromatic nuclei,has_nuclear_feature
+Lymphoid Neoplasm Diffuse Large B-cell Lymphoma,Prominent nucleoli,has_nuclear_feature
+Lymphoid Neoplasm Diffuse Large B-cell Lymphoma,Increased Mitotic Figures,has_cytological_feature
+Lymphoid Neoplasm Diffuse Large B-cell Lymphoma,Large Cell,has_cytological_feature
+Mesothelioma,Cell Epithelioid,has_cytological_feature
+Mesothelioma,Biphasic Pattern,has_growth_pattern
+Mesothelioma,spindle cell,has_cytological_feature
+Mesothelioma,Sarcomatoid Element,has_cytological_feature
+Mesothelioma,Tubular Pattern,has_growth_pattern
+Mesothelioma,papillary,has_growth_pattern
+Mesothelioma,Micropapillary pattern,has_growth_pattern
+Mesothelioma,Solid Pattern,has_growth_pattern
+Mesothelioma,Abundant cytoplasm,has_cytological_feature
+Mesothelioma,Prominent nucleoli,has_nuclear_feature
+Mesothelioma,connective tissue stroma,has_background_feature
+Mesothelioma,Vascular invasion by tumor,has_invasion_pattern
+Ovarian Serous Cystadenocarcinoma,Ovary,found_in
+Ovarian Serous Cystadenocarcinoma,Papillary pattern,has_growth_pattern
+Ovarian Serous Cystadenocarcinoma,papillary,has_growth_pattern
+Ovarian Serous Cystadenocarcinoma,Solid Pattern,has_growth_pattern
+Ovarian Serous Cystadenocarcinoma,Pseudo-Psammoma Body Formation,has_cytological_feature
+Ovarian Serous Cystadenocarcinoma,Calcification,has_cytological_feature
+Ovarian Serous Cystadenocarcinoma,Prominent nucleoli,has_nuclear_feature
+Ovarian Serous Cystadenocarcinoma,Lymph-vascular invasion,has_invasion_pattern
+Ovarian Serous Cystadenocarcinoma,Vascular invasion by tumor,has_invasion_pattern
+Ovarian Serous Cystadenocarcinoma,Serosal surface involvement,has_invasion_pattern
+Ovarian Serous Cystadenocarcinoma,Tumor invasion penetrating serosa (finding),has_invasion_pattern
+Ovarian Serous Cystadenocarcinoma,desmoplastic,has_background_feature
+Paraganglioma,Head and neck structure,found_in
+Paraganglioma,Nesting (Zellballen) Growth Pattern,has_growth_pattern
+Paraganglioma,sustentacular cell,has_cytological_feature
+Paraganglioma,Prominent vasculature,has_background_feature
+Paraganglioma,Coarse granulocyte chromatin,has_nuclear_feature
+Paraganglioma,Abundant cytoplasm,has_cytological_feature
+Pheochromocytoma,Adrenal Medulla,found_in
+Pheochromocytoma,Nesting (Zellballen) Growth Pattern,has_growth_pattern
+Pheochromocytoma,Neoplastic Polygonal Cell,has_cytological_feature
+Pheochromocytoma,Cellular Granularity Present,has_cytological_feature
+Pheochromocytoma,Cytoplasmic Eosinophilic Globules Present,has_cytological_feature
+Pheochromocytoma,Prominent vasculature,has_background_feature
+Pheochromocytoma,Hemorrhages,has_background_feature
+Pheochromocytoma,Capsular Invasion,has_invasion_pattern
+Pheochromocytoma,Hyperchromasia,has_nuclear_feature
