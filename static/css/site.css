@@ -55,7 +55,7 @@ figcaption b{color:var(--ink)}
 table{border-collapse:collapse;width:100%;font-size:14.5px;font-variant-numeric:tabular-nums}
 th,td{padding:10px 14px;text-align:right;white-space:nowrap}
 th:first-child,td:first-child{text-align:left}
-thead th{background:var(--tint);font-weight:600;border-bottom:1px solid var(--line)}
+thead th{background:#f6bcd4;font-weight:600;border-bottom:1px solid #ee9fc2}
 tbody tr+tr td{border-top:1px solid var(--line)}
 tr.ours td{font-weight:700;background:color-mix(in srgb,var(--eosin) 10%,transparent)}
 .note{font-size:14px;color:var(--muted);margin-bottom:26px}

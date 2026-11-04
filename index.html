@@ -39,10 +39,13 @@
 <link rel="stylesheet" href="static/css/teaser.css">
 <link rel="stylesheet" href="static/css/pipeline.css">
 <link rel="stylesheet" href="static/css/qualitative.css">
+<link rel="stylesheet" href="static/css/kg-explorer.css">
 <script src="static/js/site.js" defer></script>
 <script src="static/js/teaser.js" defer></script>
 <script src="static/js/pipeline.js" defer></script>
+<script src="static/js/kg.js" defer></script>
 <script src="static/js/qualitative.js" defer></script>
+<script src="static/js/kg-explorer.js" defer></script>
 </head>
 <body>
 <nav></nav>
@@ -483,7 +486,7 @@
 </div></section>
 
 <section id="results"><div class="wrap">
-  <h2>Results &amp; Evaluation</h2>
+  <h2>Quantitative Results &amp; Evaluation</h2>
   <h3>1. Report generation on WSI-Bench</h3>
   <p class="lead">PathKGen outperforms existing WSI MLLMs on most metrics, including a 9.09% relative gain in the LLM-as-a-Judge WSI-Precision.</p>
   <div class="tw"><table>
@@ -535,9 +538,22 @@
 <section id="graph" class="alt-bg"><div class="wrap">
   <h2>Curated Pathology Knowledge Graph</h2>
   <p class="lead">The graph has 177 nodes and 317 edges across 31 histology classes. It is sparse yet cohesive (density 0.01, average out-degree 1.79). Relations fall into six categories: cytological feature (71), growth pattern (69), nuclear feature (57), invasion pattern (50), background feature (42) and found in (28).</p>
-  <figure>
-    <img src="static/images/graph.jpg" alt="Full curated pathology knowledge graph" loading="lazy">
-  </figure>
+
+  <div class="kx" id="kx" data-graph="static/graph/relations.csv" data-names="on">
+    <div class="kx-legend" role="group" aria-label="Legend: relation types (click to show or hide) and node types"></div>
+    <div class="kx-stage">
+      <canvas role="img" aria-label="Interactive curated pathology knowledge graph with 177 nodes and 317 edges. Edges are coloured by relation type."></canvas>
+      <div class="kx-status" role="status"></div>
+    </div>
+    <div class="kx-ctl">
+      <button type="button" data-act="in" title="Zoom in" aria-label="Zoom in">+</button>
+      <button type="button" data-act="out" title="Zoom out" aria-label="Zoom out">&minus;</button>
+      <button type="button" data-act="fit" title="Fit the whole graph">Fit graph</button>
+      <button type="button" data-act="reset" title="Restore the original layout">Reset</button>
+      <button type="button" data-act="names" aria-pressed="true" title="Show or hide the names of all nodes">Names</button>
+    </div>
+  </div>
+  <p class="kx-hint">Hover a node to highlight it and its neighbours (click to keep it selected). Use Names to show or hide all node names; zoom in to reveal more. Drag nodes to rearrange them or the background to pan. Click the graph, then scroll to zoom. Click a legend item to hide that relation type.</p>
 </div></section>
 
 <section id="bibtex"><div class="wrap">
